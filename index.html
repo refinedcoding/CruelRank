@@ -1,2121 +1,2714 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="http://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet" href="http://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-<script>
-     $(document).ready(
-         function () {
-             $('#coders').DataTable( {
-                 "pageLength": 500
-             } );
-         }
-     );
-</script >
+	<meta charset="utf-8">
+	<title>残酷刷题群</title>
+
+	<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- Tablesorter: required -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/theme.blue.min.css" integrity="sha512-jJ9r3lTLaH5XXa9ZOsCQU8kLvxdAVzyTWO/pnzdZrshJQfnw1oevJFpoyCDr7K1lqt1hUgqoxA5e2PctVtlSTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script id="js">$(function() {
+
+	// initial sort set using sortList option
+	$(".table1").tablesorter({
+		theme : 'blue',
+		// sort on the first column and second column in ascending order
+		sortList: [[1,0]],
+    headers: {0: {sorter: false}},
+    emptyTo: 'bottom'    
+	});
+  
+  var table = $("#myTable");
+  table.bind("sortEnd",function() { 
+      var i = 0;
+      table.find("tr:gt(0)").each(function(){
+          $(this).find("td:eq(0)").text(i);
+          i++;
+      });
+  });     
+
+});</script>
 </head>
 <body>
-<h1>Cruel Coding</h1>
-<h5>Update at Mon Jul 19 16:46:33 PDT 2021</h5>
-<div class="unit w-2-3">
-<div class="hero-callout">
-<table id="coders">
-<thead>
+<br/>
+<div id="main">
+<h1>残酷刷题群 - 战力榜</h1>
+<div>原榜
+<a href="http://board.cruelcoding.com/" target="_blank">board.cruelcoding.com</a>
+</div>
+<div>炫榜
+<a href="http://rank.cruelcoding.com/" target="_blank">rank.cruelcoding.com</a>
+</div>
+<div>系统子群
+<a href="http://system.cruelcoding.com/" target="_blank">system.cruelcoding.com</a>
+</div>
+<div>八股子群
+<a href="http://fundamental.cruelcoding.com/" target="_blank">fundamental.cruelcoding.com</a>
+</div>
+<div>英语子群
+<a href="http://english.cruelcoding.com/" target="_blank">english.cruelcoding.com</a>
+</div>
+<br/>
+<br/>
+<!-- style="font-family: 'Calibri', Arial, sans-serif ;font-size: 11px;" -->
+<table id="myTable" class="table1 tablesorter" >
+  <thead>
 <tr>
+    <th align="center" colspan="8">General Info</th>
+    <th align="center" colspan="2">Week 255</th>
+    <th align="center" colspan="2">Week 254</th>
+    <th align="center" colspan="2">Week 253</th>
+</tr>
+<tr>
+    <th>Line</th>
     <th>Rank</th>
     <th>ID</th>
-    <th>Days</th>
-    <th>Rating</th>
-    <th>Score</th>
-    <th>W250 Rank</th>
-    <th>Score</th>
-    <th>W249 Rank</th>
-    <th>Score</th>
-    <th>W248 Rank</th>
-    <th>Score</th>
+    <th>Join</th>
+    <th align="right">Days</th>
+    <th align="right">No</th>
+    <th align="right">Rating</th>
+    <th align="right">Score</th>
+    <th align="right">Rank</th>
+    <th align="right">Score</th>
+    <th align="right">Rank</th>
+    <th align="right">Score</th>
+    <th align="right">Rank</th>
+    <th align="right">Score</th>
 </tr>
 </thead>
+<tbody>
      <tr>
         <td>1</td>
-        <td><a href="https://leetcode-cn.com/u/arignote">arignote</a</td>
-        <td>435</td>
-        <td>2915</td>
-        <td>99.89</td>
-        <td>40</td>
-        <td>99.77</td>
         <td>1</td>
-        <td>100.00</td>
-        <td>56</td>
-        <td>99.68</td>
+        <td><a href="https://leetcode.com/cuiaoxiang">cuiaoxiang</a</td>
+        <td>18-10-22</td>
+        <td align="right">1034</td>
+        <td align="right">5</td>
+        <td align="right">3008</td>
+        <td align="right">99.82</td>
+        <td align="right">58</td>
+        <td align="right">99.67</td>
+        <td align="right">6</td>
+        <td align="right">99.97</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>2</td>
-        <td><a href="https://leetcode.com/endlesscheng">endlesscheng</a</td>
-        <td>632</td>
-        <td>2866</td>
-        <td>99.84</td>
-        <td>24</td>
-        <td>99.87</td>
-        <td>32</td>
-        <td>99.81</td>
-        <td>107</td>
-        <td>99.38</td>
+        <td>2</td>
+        <td><a href="https://leetcode.com/ddoudle">ddoudle</a</td>
+        <td>20-03-24</td>
+        <td align="right">515</td>
+        <td align="right">39</td>
+        <td align="right">2753</td>
+        <td align="right">99.80</td>
+        <td align="right">43</td>
+        <td align="right">99.76</td>
+        <td align="right">28</td>
+        <td align="right">99.84</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>3</td>
-        <td><a href="https://leetcode.com/wxy9018">wxy9018</a</td>
-        <td>818</td>
-        <td>2622</td>
-        <td>99.75</td>
-        <td>263</td>
-        <td>98.47</td>
-        <td>56</td>
-        <td>99.66</td>
-        <td>28</td>
-        <td>99.84</td>
+        <td>3</td>
+        <td><a href="https://leetcode-cn.com/u/arignote">arignote</a</td>
+        <td>20-05-09</td>
+        <td align="right">469</td>
+        <td align="right">45</td>
+        <td align="right">3156</td>
+        <td align="right">99.78</td>
+        <td align="right">24</td>
+        <td align="right">99.87</td>
+        <td align="right">53</td>
+        <td align="right">99.69</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>4</td>
-        <td><a href="https://leetcode.com/OTTFF">OTTFF</a</td>
-        <td>691</td>
-        <td>2779</td>
-        <td>99.71</td>
-        <td>25</td>
-        <td>99.86</td>
-        <td>73</td>
-        <td>99.55</td>
-        <td>200</td>
-        <td>93.84</td>
+        <td>4</td>
+        <td><a href="https://leetcode.com/wxy9018">wxy9018</a</td>
+        <td>19-04-22</td>
+        <td align="right">852</td>
+        <td align="right">11</td>
+        <td align="right">2579</td>
+        <td align="right">99.78</td>
+        <td align="right">65</td>
+        <td align="right">94.32</td>
+        <td align="right">53</td>
+        <td align="right">99.70</td>
+        <td align="right">25</td>
+        <td align="right">99.86</td>
      </tr>
      <tr>
         <td>5</td>
-        <td><a href="https://leetcode-cn.com/u/cuiaoxiang">cuiaoxiang</a</td>
-        <td>1000</td>
-        <td>2968</td>
-        <td>99.70</td>
-        <td>55</td>
-        <td>99.68</td>
-        <td>51</td>
-        <td>99.71</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>5</td>
+        <td><a href="https://leetcode-cn.com/u/MaskRay">MaskRay</a</td>
+        <td>21-04-10</td>
+        <td align="right">133</td>
+        <td align="right">94</td>
+        <td align="right">2726</td>
+        <td align="right">99.74</td>
+        <td align="right">59</td>
+        <td align="right">99.66</td>
+        <td align="right">33</td>
+        <td align="right">99.81</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>6</td>
-        <td><a href="https://leetcode.com/delphih">delphih</a</td>
-        <td>135</td>
-        <td>2640</td>
-        <td>99.67</td>
-        <td>102</td>
-        <td>99.41</td>
-        <td>353</td>
-        <td>92.81</td>
-        <td>13</td>
-        <td>99.93</td>
+        <td>6</td>
+        <td><a href="https://leetcode-cn.com/u/delphih">delphih</a</td>
+        <td>21-03-05</td>
+        <td align="right">169</td>
+        <td align="right">91</td>
+        <td align="right">2638</td>
+        <td align="right">99.73</td>
+        <td align="right">30</td>
+        <td align="right">99.69</td>
+        <td align="right">42</td>
+        <td align="right">99.76</td>
+        <td align="right">268</td>
+        <td align="right">98.43</td>
      </tr>
      <tr>
         <td>7</td>
-        <td><a href="https://leetcode-cn.com/u/MaskRay">MaskRay</a</td>
-        <td>99</td>
-        <td>2686</td>
-        <td>99.64</td>
-        <td>65</td>
-        <td>99.60</td>
-        <td>57</td>
-        <td>99.67</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>7</td>
+        <td><a href="https://leetcode.com/HIT_TOM">HIT_TOM</a</td>
+        <td>21-05-07</td>
+        <td align="right">106</td>
+        <td align="right">108</td>
+        <td align="right">2460</td>
+        <td align="right">99.53</td>
+        <td align="right">26</td>
+        <td align="right">99.73</td>
+        <td align="right">117</td>
+        <td align="right">99.33</td>
+        <td align="right">117</td>
+        <td align="right">99.32</td>
      </tr>
      <tr>
         <td>8</td>
-        <td><a href="https://leetcode-cn.com/u/zhenguowcs">zhenguowcs</a</td>
-        <td>147</td>
-        <td>2594</td>
-        <td>99.58</td>
-        <td>88</td>
-        <td>99.49</td>
-        <td>55</td>
-        <td>99.66</td>
-        <td>356</td>
-        <td>92.93</td>
+        <td>8</td>
+        <td><a href="https://leetcode.com/nyu_ldf">nyu_ldf</a</td>
+        <td>21-04-17</td>
+        <td align="right">126</td>
+        <td align="right">97</td>
+        <td align="right">2526</td>
+        <td align="right">99.34</td>
+        <td align="right">19</td>
+        <td align="right">99.81</td>
+        <td align="right">407</td>
+        <td align="right">97.64</td>
+        <td align="right">191</td>
+        <td align="right">98.88</td>
      </tr>
      <tr>
         <td>9</td>
-        <td><a href="https://leetcode-cn.com/u/please_AC">please_AC</a</td>
-        <td>302</td>
-        <td>2611</td>
-        <td>99.55</td>
-        <td>223</td>
-        <td>98.70</td>
-        <td>29</td>
-        <td>99.83</td>
-        <td>127</td>
-        <td>99.27</td>
+        <td>9</td>
+        <td><a href="https://leetcode.com/ZeRoLJ42">ZeRoLJ42</a</td>
+        <td>21-06-06</td>
+        <td align="right">76</td>
+        <td align="right">126</td>
+        <td align="right">2506</td>
+        <td align="right">99.26</td>
+        <td align="right">224</td>
+        <td align="right">92.62</td>
+        <td align="right">140</td>
+        <td align="right">99.19</td>
+        <td align="right">114</td>
+        <td align="right">99.33</td>
      </tr>
      <tr>
         <td>10</td>
-        <td><a href="https://leetcode.com/silvertint10">silvertint10</a</td>
-        <td>52</td>
-        <td>2547</td>
-        <td>99.54</td>
-        <td>42</td>
-        <td>99.76</td>
-        <td>137</td>
-        <td>99.15</td>
-        <td>116</td>
-        <td>99.33</td>
+        <td>10</td>
+        <td><a href="https://leetcode-cn.com/u/xyzzzzzzzz">xyzzzzzzzz</a</td>
+        <td>20-12-31</td>
+        <td align="right">233</td>
+        <td align="right">71</td>
+        <td align="right">2649</td>
+        <td align="right">99.26</td>
+        <td align="right">4</td>
+        <td align="right">99.97</td>
+        <td align="right">319</td>
+        <td align="right">98.15</td>
+        <td align="right">247</td>
+        <td align="right">98.55</td>
      </tr>
      <tr>
         <td>11</td>
-        <td><a href="https://leetcode-cn.com/u/xyzzzzzzzz">xyzzzzzzzz</a</td>
-        <td>199</td>
-        <td>2665</td>
-        <td>99.54</td>
-        <td>335</td>
-        <td>93.05</td>
-        <td>90</td>
-        <td>99.45</td>
-        <td>64</td>
-        <td>99.63</td>
+        <td>11</td>
+        <td><a href="https://leetcode.com/chenjianxu97">chenjianxu97</a</td>
+        <td>20-11-21</td>
+        <td align="right">273</td>
+        <td align="right">68</td>
+        <td align="right">2433</td>
+        <td align="right">99.23</td>
+        <td align="right">40</td>
+        <td align="right">99.58</td>
+        <td align="right">195</td>
+        <td align="right">98.87</td>
+        <td align="right">418</td>
+        <td align="right">97.54</td>
      </tr>
      <tr>
         <td>12</td>
-        <td><a href="https://leetcode.com/zrts">zrts</a</td>
-        <td>73</td>
-        <td>2278</td>
-        <td>99.52</td>
-        <td>70</td>
-        <td>99.60</td>
-        <td>155</td>
-        <td>99.04</td>
-        <td>97</td>
-        <td>99.44</td>
+        <td>12</td>
+        <td><a href="https://leetcode-cn.com/u/pku_erutan">pku_erutan</a</td>
+        <td>20-04-11</td>
+        <td align="right">497</td>
+        <td align="right">41</td>
+        <td align="right">2776</td>
+        <td align="right">99.06</td>
+        <td align="right">14</td>
+        <td align="right">99.92</td>
+        <td align="right">309</td>
+        <td align="right">98.19</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>13</td>
-        <td><a href="https://leetcode-cn.com/u/ddoudle">ddoudle</a</td>
-        <td>481</td>
-        <td>2641</td>
-        <td>99.39</td>
-        <td>121</td>
-        <td>99.30</td>
-        <td>157</td>
-        <td>99.03</td>
-        <td>91</td>
-        <td>99.48</td>
+        <td>13</td>
+        <td><a href="https://leetcode.com/huanglanzhiguan">huanglanzhiguan</a</td>
+        <td>19-12-30</td>
+        <td align="right">600</td>
+        <td align="right">25</td>
+        <td align="right">2336</td>
+        <td align="right">98.95</td>
+        <td align="right">42</td>
+        <td align="right">99.56</td>
+        <td align="right">286</td>
+        <td align="right">98.34</td>
+        <td align="right">683</td>
+        <td align="right">95.98</td>
      </tr>
      <tr>
         <td>14</td>
-        <td><a href="https://leetcode.com/nyu_ldf">nyu_ldf</a</td>
-        <td>92</td>
-        <td>2481</td>
-        <td>99.38</td>
-        <td>279</td>
-        <td>98.38</td>
-        <td>116</td>
-        <td>99.28</td>
-        <td>89</td>
-        <td>99.49</td>
+        <td>14</td>
+        <td><a href="https://leetcode.com/angel30818">angel30818</a</td>
+        <td>19-08-30</td>
+        <td align="right">722</td>
+        <td align="right">20</td>
+        <td align="right">2331</td>
+        <td align="right">98.94</td>
+        <td align="right">103</td>
+        <td align="right">93.91</td>
+        <td align="right">48</td>
+        <td align="right">99.73</td>
+        <td align="right">314</td>
+        <td align="right">98.16</td>
      </tr>
      <tr>
         <td>15</td>
-        <td><a href="https://leetcode-cn.com/u/CE_RE_WAyitiaolong">CE_RE_WAyitiaolong</a</td>
-        <td>484</td>
-        <td>2431</td>
-        <td>99.34</td>
-        <td>82</td>
-        <td>99.53</td>
-        <td>898</td>
-        <td>89.41</td>
-        <td>145</td>
-        <td>99.16</td>
+        <td>15</td>
+        <td><a href="https://leetcode-cn.com/u/OTTFF">OTTFF</a</td>
+        <td>19-08-27</td>
+        <td align="right">725</td>
+        <td align="right">19</td>
+        <td align="right">2776</td>
+        <td align="right">98.75</td>
+        <td align="right">229</td>
+        <td align="right">92.57</td>
+        <td align="right">27</td>
+        <td align="right">99.85</td>
+        <td align="right">401</td>
+        <td align="right">97.64</td>
      </tr>
      <tr>
         <td>16</td>
-        <td><a href="https://leetcode.com/ZeRoLJ42">ZeRoLJ42</a</td>
-        <td>42</td>
-        <td>2405</td>
-        <td>99.29</td>
-        <td>238</td>
-        <td>98.62</td>
-        <td>229</td>
-        <td>93.58</td>
-        <td>8</td>
-        <td>99.96</td>
+        <td>16</td>
+        <td><a href="https://leetcode.com/owen2">owen2</a</td>
+        <td>20-10-24</td>
+        <td align="right">301</td>
+        <td align="right">62</td>
+        <td align="right">2456</td>
+        <td align="right">98.69</td>
+        <td align="right">288</td>
+        <td align="right">91.94</td>
+        <td align="right">114</td>
+        <td align="right">99.34</td>
+        <td align="right">334</td>
+        <td align="right">98.04</td>
      </tr>
      <tr>
         <td>17</td>
-        <td><a href="https://leetcode-cn.com/u/YoungForest">YoungForest</a</td>
-        <td>483</td>
-        <td>2460</td>
-        <td>99.22</td>
-        <td>192</td>
-        <td>98.88</td>
-        <td>71</td>
-        <td>99.56</td>
-        <td>1181</td>
-        <td>88.12</td>
+        <td>17</td>
+        <td><a href="https://leetcode.com/james_fan1101">james_fan1101</a</td>
+        <td>21-07-20</td>
+        <td align="right">32</td>
+        <td align="right">151</td>
+        <td align="right">2324</td>
+        <td align="right">98.61</td>
+        <td align="right">234</td>
+        <td align="right">98.64</td>
+        <td align="right">244</td>
+        <td align="right">98.57</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>18</td>
-        <td><a href="https://leetcode-cn.com/u/harttle">harttle</a</td>
-        <td>547</td>
-        <td>2625</td>
-        <td>99.19</td>
-        <td>253</td>
-        <td>98.53</td>
-        <td>117</td>
-        <td>99.28</td>
-        <td>156</td>
-        <td>99.10</td>
+        <td>18</td>
+        <td><a href="https://leetcode-cn.com/u/han3000">han3000</a</td>
+        <td>18-09-08</td>
+        <td align="right">1078</td>
+        <td align="right">2</td>
+        <td align="right">2684</td>
+        <td align="right">98.53</td>
+        <td align="right">406</td>
+        <td align="right">97.64</td>
+        <td align="right">99</td>
+        <td align="right">99.42</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>19</td>
-        <td><a href="https://leetcode-cn.com/u/pku_erutan">pku_erutan</a</td>
-        <td>463</td>
-        <td>2725</td>
-        <td>99.13</td>
-        <td>69</td>
-        <td>99.60</td>
-        <td>217</td>
-        <td>98.65</td>
-        <td>181</td>
-        <td>93.95</td>
+        <td>19</td>
+        <td><a href="https://leetcode.com/sshang">sshang</a</td>
+        <td>19-01-05</td>
+        <td align="right">959</td>
+        <td align="right">8</td>
+        <td align="right">2483</td>
+        <td align="right">98.45</td>
+        <td align="right">73</td>
+        <td align="right">94.23</td>
+        <td align="right">189</td>
+        <td align="right">98.91</td>
+        <td align="right">343</td>
+        <td align="right">97.99</td>
      </tr>
      <tr>
         <td>20</td>
-        <td><a href="https://leetcode.com/insomniacat">insomniacat</a</td>
-        <td>75</td>
-        <td>2330</td>
-        <td>99.12</td>
-        <td>73</td>
-        <td>99.58</td>
-        <td>215</td>
-        <td>98.67</td>
-        <td>408</td>
-        <td>92.63</td>
+        <td>20</td>
+        <td><a href="https://leetcode-cn.com/u/please_AC">please_AC</a</td>
+        <td>20-09-19</td>
+        <td align="right">336</td>
+        <td align="right">55</td>
+        <td align="right">2635</td>
+        <td align="right">98.17</td>
+        <td align="right">326</td>
+        <td align="right">98.11</td>
+        <td align="right">303</td>
+        <td align="right">98.22</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>21</td>
-        <td><a href="https://leetcode.com/Castling">Castling</a</td>
-        <td>61</td>
-        <td>2299</td>
-        <td>99.12</td>
-        <td>205</td>
-        <td>98.81</td>
-        <td>100</td>
-        <td>99.42</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>21</td>
+        <td><a href="https://leetcode-cn.com/u/kesihai">kesihai</a</td>
+        <td>21-04-26</td>
+        <td align="right">117</td>
+        <td align="right">100</td>
+        <td align="right">2250</td>
+        <td align="right">98.16</td>
+        <td align="right">403</td>
+        <td align="right">97.66</td>
+        <td align="right">228</td>
+        <td align="right">98.66</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>22</td>
-        <td><a href="https://leetcode-cn.com/u/han3000">han3000</a</td>
-        <td>1044</td>
-        <td>2642</td>
-        <td>99.00</td>
-        <td>215</td>
-        <td>98.75</td>
-        <td>120</td>
-        <td>99.26</td>
-        <td>202</td>
-        <td>93.83</td>
+        <td>22</td>
+        <td><a href="https://leetcode.com/silvertint10">silvertint10</a</td>
+        <td>21-05-27</td>
+        <td align="right">86</td>
+        <td align="right">121</td>
+        <td align="right">2508</td>
+        <td align="right">98.03</td>
+        <td align="right">68</td>
+        <td align="right">99.61</td>
+        <td align="right">605</td>
+        <td align="right">96.44</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>23</td>
-        <td><a href="https://leetcode.com/quantuminfo">quantuminfo</a</td>
-        <td>128</td>
-        <td>2476</td>
-        <td>99.00</td>
-        <td>271</td>
-        <td>98.42</td>
-        <td>68</td>
-        <td>99.58</td>
-        <td>485</td>
-        <td>92.18</td>
+        <td>23</td>
+        <td><a href="https://leetcode.com/perry304">perry304</a</td>
+        <td>21-05-17</td>
+        <td align="right">96</td>
+        <td align="right">116</td>
+        <td align="right">2392</td>
+        <td align="right">97.95</td>
+        <td align="right">158</td>
+        <td align="right">93.33</td>
+        <td align="right">365</td>
+        <td align="right">97.88</td>
+        <td align="right">338</td>
+        <td align="right">98.02</td>
      </tr>
      <tr>
         <td>24</td>
-        <td><a href="https://leetcode-cn.com/u/lozy219">lozy219</a</td>
-        <td>520</td>
-        <td>2642</td>
-        <td>96.76</td>
-        <td>64</td>
-        <td>99.63</td>
-        <td>372</td>
-        <td>92.69</td>
-        <td>190</td>
-        <td>93.90</td>
+        <td>24</td>
+        <td><a href="https://leetcode.com/lih627">lih627</a</td>
+        <td>21-06-12</td>
+        <td align="right">70</td>
+        <td align="right">131</td>
+        <td align="right">2223</td>
+        <td align="right">97.95</td>
+        <td align="right">499</td>
+        <td align="right">97.10</td>
+        <td align="right">206</td>
+        <td align="right">98.79</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>25</td>
-        <td><a href="https://leetcode.com/HIT_TOM">HIT_TOM</a</td>
-        <td>72</td>
-        <td>2477</td>
-        <td>96.60</td>
-        <td>600</td>
-        <td>91.50</td>
-        <td>86</td>
-        <td>99.47</td>
-        <td>218</td>
-        <td>93.73</td>
+        <td>25</td>
+        <td><a href="https://leetcode-cn.com/u/home_z">home_z</a</td>
+        <td>21-01-12</td>
+        <td align="right">221</td>
+        <td align="right">83</td>
+        <td align="right">2252</td>
+        <td align="right">97.88</td>
+        <td align="right">494</td>
+        <td align="right">97.13</td>
+        <td align="right">235</td>
+        <td align="right">98.62</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>26</td>
-        <td><a href="https://leetcode.com/owen2">owen2</a</td>
-        <td>267</td>
-        <td>2485</td>
-        <td>96.25</td>
-        <td>317</td>
-        <td>93.15</td>
-        <td>114</td>
-        <td>99.30</td>
-        <td>310</td>
-        <td>93.20</td>
+        <td>26</td>
+        <td><a href="https://leetcode-cn.com/u/FighterNan">FighterNan</a</td>
+        <td>20-02-09</td>
+        <td align="right">559</td>
+        <td align="right">32</td>
+        <td align="right">2335</td>
+        <td align="right">97.87</td>
+        <td align="right">110</td>
+        <td align="right">93.84</td>
+        <td align="right">392</td>
+        <td align="right">97.73</td>
+        <td align="right">337</td>
+        <td align="right">98.02</td>
      </tr>
      <tr>
         <td>27</td>
-        <td><a href="https://leetcode.com/lilydenris">lilydenris</a</td>
-        <td>274</td>
-        <td>2351</td>
-        <td>96.03</td>
-        <td>751</td>
-        <td>90.62</td>
-        <td>131</td>
-        <td>99.19</td>
-        <td>367</td>
-        <td>92.87</td>
+        <td>27</td>
+        <td><a href="https://leetcode.com/Yao_Yin">Yao_Yin</a</td>
+        <td>21-07-10</td>
+        <td align="right">42</td>
+        <td align="right">144</td>
+        <td align="right">2293</td>
+        <td align="right">97.72</td>
+        <td align="right">920</td>
+        <td align="right">80.20</td>
+        <td align="right">413</td>
+        <td align="right">97.60</td>
+        <td align="right">367</td>
+        <td align="right">97.84</td>
      </tr>
      <tr>
         <td>28</td>
-        <td><a href="https://leetcode.com/angel30818">angel30818</a</td>
-        <td>688</td>
-        <td>2403</td>
-        <td>95.71</td>
-        <td>733</td>
-        <td>90.72</td>
-        <td>468</td>
-        <td>92.09</td>
-        <td>114</td>
-        <td>99.34</td>
+        <td>28</td>
+        <td><a href="https://leetcode.com/Rayleigh0328">Rayleigh0328</a</td>
+        <td>19-10-19</td>
+        <td align="right">672</td>
+        <td align="right">23</td>
+        <td align="right">2277</td>
+        <td align="right">97.28</td>
+        <td align="right">528</td>
+        <td align="right">89.38</td>
+        <td align="right">691</td>
+        <td align="right">95.99</td>
+        <td align="right">243</td>
+        <td align="right">98.58</td>
      </tr>
      <tr>
         <td>29</td>
-        <td><a href="https://leetcode.com/goodstudyqaq">goodstudyqaq</a</td>
-        <td>71</td>
-        <td>2144</td>
-        <td>95.66</td>
-        <td>151</td>
-        <td>99.12</td>
-        <td>452</td>
-        <td>92.19</td>
-        <td>610</td>
-        <td>91.45</td>
+        <td>29</td>
+        <td><a href="https://leetcode.com/quantuminfo">quantuminfo</a</td>
+        <td>21-03-12</td>
+        <td align="right">162</td>
+        <td align="right">93</td>
+        <td align="right">2478</td>
+        <td align="right">97.09</td>
+        <td align="right">249</td>
+        <td align="right">92.35</td>
+        <td align="right">349</td>
+        <td align="right">97.98</td>
+        <td align="right">645</td>
+        <td align="right">96.21</td>
      </tr>
      <tr>
         <td>30</td>
-        <td><a href="https://leetcode.com/ShidaLei">ShidaLei</a</td>
-        <td>489</td>
-        <td>2458</td>
-        <td>95.63</td>
-        <td>558</td>
-        <td>91.75</td>
-        <td>78</td>
-        <td>99.52</td>
-        <td>866</td>
-        <td>89.96</td>
+        <td>30</td>
+        <td><a href="https://leetcode-cn.com/u/KKKXY">KKKXY</a</td>
+        <td>19-08-13</td>
+        <td align="right">739</td>
+        <td align="right">18</td>
+        <td align="right">2293</td>
+        <td align="right">97.04</td>
+        <td align="right">486</td>
+        <td align="right">89.83</td>
+        <td align="right">705</td>
+        <td align="right">95.91</td>
+        <td align="right">310</td>
+        <td align="right">98.18</td>
      </tr>
      <tr>
         <td>31</td>
-        <td><a href="https://leetcode.com/wisdompeak">wisdompeak</a</td>
-        <td>1050</td>
-        <td>2378</td>
-        <td>95.61</td>
-        <td>208</td>
-        <td>98.79</td>
-        <td>412</td>
-        <td>92.44</td>
-        <td>1204</td>
-        <td>87.99</td>
+        <td>31</td>
+        <td><a href="https://leetcode-cn.com/u/YoungForest">YoungForest</a</td>
+        <td>20-03-22</td>
+        <td align="right">517</td>
+        <td align="right">38</td>
+        <td align="right">2460</td>
+        <td align="right">96.74</td>
+        <td align="right">197</td>
+        <td align="right">92.91</td>
+        <td align="right">616</td>
+        <td align="right">96.42</td>
+        <td align="right">500</td>
+        <td align="right">97.06</td>
      </tr>
      <tr>
         <td>32</td>
-        <td><a href="https://leetcode-cn.com/u/Tyrande">Tyrande</a</td>
-        <td>63</td>
-        <td>2212</td>
-        <td>95.58</td>
-        <td>276</td>
-        <td>98.39</td>
-        <td>2146</td>
-        <td>76.63</td>
-        <td>384</td>
-        <td>92.77</td>
+        <td>32</td>
+        <td><a href="https://leetcode-cn.com/u/ShidaLei">ShidaLei</a</td>
+        <td>20-03-16</td>
+        <td align="right">523</td>
+        <td align="right">35</td>
+        <td align="right">2371</td>
+        <td align="right">96.25</td>
+        <td align="right">150</td>
+        <td align="right">93.41</td>
+        <td align="right">159</td>
+        <td align="right">99.08</td>
+        <td align="right">1269</td>
+        <td align="right">92.53</td>
      </tr>
      <tr>
         <td>33</td>
-        <td><a href="https://leetcode.com/lzl124631x">lzl124631x</a</td>
-        <td>548</td>
-        <td>2378</td>
-        <td>95.48</td>
-        <td>507</td>
-        <td>92.04</td>
-        <td>175</td>
-        <td>98.92</td>
-        <td>1250</td>
-        <td>87.72</td>
+        <td>33</td>
+        <td><a href="https://leetcode.com/27rabbitlt">27rabbitlt</a</td>
+        <td>21-07-11</td>
+        <td align="right">41</td>
+        <td align="right">145</td>
+        <td align="right">1920</td>
+        <td align="right">96.14</td>
+        <td align="right">202</td>
+        <td align="right">92.86</td>
+        <td align="right">101</td>
+        <td align="right">99.42</td>
+        <td align="right">2435</td>
+        <td align="right">80.67</td>
      </tr>
      <tr>
         <td>34</td>
-        <td><a href="https://leetcode-cn.com/u/tommyjiang">tommyjiang</a</td>
-        <td>714</td>
-        <td>2506</td>
-        <td>95.41</td>
-        <td>745</td>
-        <td>90.65</td>
-        <td>136</td>
-        <td>99.16</td>
-        <td>574</td>
-        <td>91.66</td>
+        <td>34</td>
+        <td><a href="https://leetcode.com/zrts">zrts</a</td>
+        <td>21-05-06</td>
+        <td align="right">107</td>
+        <td align="right">106</td>
+        <td align="right">2342</td>
+        <td align="right">96.05</td>
+        <td align="right">342</td>
+        <td align="right">91.36</td>
+        <td align="right">148</td>
+        <td align="right">99.15</td>
+        <td align="right">1199</td>
+        <td align="right">92.95</td>
      </tr>
      <tr>
         <td>35</td>
-        <td><a href="https://leetcode.com/chenjianxu97">chenjianxu97</a</td>
-        <td>239</td>
-        <td>2521</td>
-        <td>95.41</td>
-        <td>629</td>
-        <td>91.33</td>
-        <td>781</td>
-        <td>90.14</td>
-        <td>90</td>
-        <td>99.48</td>
+        <td>35</td>
+        <td><a href="https://leetcode-cn.com/u/tommyjiang">tommyjiang</a</td>
+        <td>19-08-04</td>
+        <td align="right">748</td>
+        <td align="right">17</td>
+        <td align="right">2414</td>
+        <td align="right">96.03</td>
+        <td align="right">54</td>
+        <td align="right">99.69</td>
+        <td align="right">1296</td>
+        <td align="right">92.38</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>36</td>
-        <td><a href="https://leetcode.com/huanglanzhiguan">huanglanzhiguan</a</td>
-        <td>566</td>
-        <td>2413</td>
-        <td>95.21</td>
-        <td>677</td>
-        <td>91.05</td>
-        <td>101</td>
-        <td>99.38</td>
-        <td>735</td>
-        <td>90.72</td>
+        <td>36</td>
+        <td><a href="https://leetcode-cn.com/u/Tyrande">Tyrande</a</td>
+        <td>21-05-16</td>
+        <td align="right">97</td>
+        <td align="right">114</td>
+        <td align="right">2185</td>
+        <td align="right">95.96</td>
+        <td align="right">870</td>
+        <td align="right">85.74</td>
+        <td align="right">158</td>
+        <td align="right">99.09</td>
+        <td align="right">1219</td>
+        <td align="right">92.83</td>
      </tr>
      <tr>
         <td>37</td>
-        <td><a href="https://leetcode.com/REED_W">REED_W</a</td>
-        <td>179</td>
-        <td>2144</td>
-        <td>95.10</td>
-        <td>148</td>
-        <td>99.14</td>
-        <td>806</td>
-        <td>89.98</td>
-        <td>678</td>
-        <td>91.05</td>
+        <td>37</td>
+        <td><a href="https://leetcode.com/wwwap">wwwap</a</td>
+        <td>20-09-14</td>
+        <td align="right">341</td>
+        <td align="right">53</td>
+        <td align="right">2114</td>
+        <td align="right">95.87</td>
+        <td align="right">140</td>
+        <td align="right">93.52</td>
+        <td align="right">305</td>
+        <td align="right">98.23</td>
+        <td align="right">1590</td>
+        <td align="right">90.64</td>
      </tr>
      <tr>
         <td>38</td>
-        <td><a href="https://leetcode.com/JDEP">JDEP</a</td>
-        <td>342</td>
-        <td>2424</td>
-        <td>95.04</td>
-        <td>269</td>
-        <td>98.43</td>
-        <td>987</td>
-        <td>88.85</td>
-        <td>577</td>
-        <td>91.64</td>
+        <td>38</td>
+        <td><a href="https://leetcode.com/direction">direction</a</td>
+        <td>21-05-02</td>
+        <td align="right">111</td>
+        <td align="right">103</td>
+        <td align="right">2167</td>
+        <td align="right">95.82</td>
+        <td align="right">401</td>
+        <td align="right">90.73</td>
+        <td align="right">155</td>
+        <td align="right">99.10</td>
+        <td align="right">1268</td>
+        <td align="right">92.54</td>
      </tr>
      <tr>
         <td>39</td>
-        <td><a href="https://leetcode.com/upupming">upupming</a</td>
-        <td>77</td>
-        <td>2087</td>
-        <td>94.12</td>
-        <td>1022</td>
-        <td>89.04</td>
-        <td>1897</td>
-        <td>78.18</td>
-        <td>136</td>
-        <td>99.21</td>
+        <td>39</td>
+        <td><a href="https://leetcode.com/lilydenris">lilydenris</a</td>
+        <td>20-10-17</td>
+        <td align="right">308</td>
+        <td align="right">61</td>
+        <td align="right">2280</td>
+        <td align="right">95.75</td>
+        <td align="right">983</td>
+        <td align="right">79.53</td>
+        <td align="right">677</td>
+        <td align="right">96.07</td>
+        <td align="right">776</td>
+        <td align="right">95.44</td>
      </tr>
      <tr>
         <td>40</td>
-        <td><a href="https://leetcode.com/kesihai">kesihai</a</td>
-        <td>83</td>
-        <td>2083</td>
-        <td>94.07</td>
-        <td>206</td>
-        <td>98.80</td>
-        <td>909</td>
-        <td>89.34</td>
-        <td>1419</td>
-        <td>86.73</td>
+        <td>40</td>
+        <td><a href="https://leetcode.com/insomniacat">insomniacat</a</td>
+        <td>21-05-04</td>
+        <td align="right">109</td>
+        <td align="right">104</td>
+        <td align="right">2386</td>
+        <td align="right">95.54</td>
+        <td align="right">253</td>
+        <td align="right">92.31</td>
+        <td align="right">717</td>
+        <td align="right">95.84</td>
+        <td align="right">809</td>
+        <td align="right">95.24</td>
      </tr>
      <tr>
         <td>41</td>
-        <td><a href="https://leetcode.com/sshang">sshang</a</td>
-        <td>925</td>
-        <td>2505</td>
-        <td>93.39</td>
-        <td>310</td>
-        <td>93.19</td>
-        <td>227</td>
-        <td>93.59</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>41</td>
+        <td><a href="https://leetcode.com/nickee1942">nickee1942</a</td>
+        <td>21-01-10</td>
+        <td align="right">223</td>
+        <td align="right">82</td>
+        <td align="right">1944</td>
+        <td align="right">95.37</td>
+        <td align="right">78</td>
+        <td align="right">94.18</td>
+        <td align="right">591</td>
+        <td align="right">96.57</td>
+        <td align="right">2898</td>
+        <td align="right">77.94</td>
      </tr>
      <tr>
         <td>42</td>
-        <td><a href="https://leetcode.com/Rayleigh0328">Rayleigh0328</a</td>
-        <td>638</td>
-        <td>2255</td>
-        <td>93.17</td>
-        <td>1255</td>
-        <td>87.67</td>
-        <td>214</td>
-        <td>98.67</td>
-        <td>1634</td>
-        <td>85.48</td>
+        <td>42</td>
+        <td><a href="https://leetcode.com/jason_wong1">jason_wong1</a</td>
+        <td>19-09-10</td>
+        <td align="right">711</td>
+        <td align="right">22</td>
+        <td align="right">2199</td>
+        <td align="right">95.33</td>
+        <td align="right">549</td>
+        <td align="right">96.81</td>
+        <td align="right">1046</td>
+        <td align="right">93.85</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>43</td>
-        <td><a href="https://leetcode-cn.com/u/Yao_Yin">Yao_Yin</a</td>
-        <td>8</td>
-        <td>2253</td>
-        <td>92.98</td>
-        <td>417</td>
-        <td>92.57</td>
-        <td>258</td>
-        <td>93.40</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>43</td>
+        <td><a href="https://leetcode.com/venico19">venico19</a</td>
+        <td>20-01-04</td>
+        <td align="right">595</td>
+        <td align="right">26</td>
+        <td align="right">2123</td>
+        <td align="right">95.27</td>
+        <td align="right">217</td>
+        <td align="right">92.70</td>
+        <td align="right">372</td>
+        <td align="right">97.84</td>
+        <td align="right">2152</td>
+        <td align="right">82.33</td>
      </tr>
      <tr>
         <td>44</td>
-        <td><a href="https://leetcode.com/perry304">perry304</a</td>
-        <td>62</td>
-        <td>2348</td>
-        <td>92.84</td>
-        <td>517</td>
-        <td>91.99</td>
-        <td>330</td>
-        <td>92.95</td>
-        <td>390</td>
-        <td>92.73</td>
+        <td>44</td>
+        <td><a href="https://leetcode.com/REED_W">REED_W</a</td>
+        <td>21-01-20</td>
+        <td align="right">213</td>
+        <td align="right">84</td>
+        <td align="right">2221</td>
+        <td align="right">95.24</td>
+        <td align="right">297</td>
+        <td align="right">91.84</td>
+        <td align="right">648</td>
+        <td align="right">96.24</td>
+        <td align="right">980</td>
+        <td align="right">94.24</td>
      </tr>
      <tr>
         <td>45</td>
-        <td><a href="https://leetcode-cn.com/u/home_z">home_z</a</td>
-        <td>187</td>
-        <td>2234</td>
-        <td>92.57</td>
-        <td>986</td>
-        <td>89.25</td>
-        <td>473</td>
-        <td>92.06</td>
-        <td>331</td>
-        <td>93.08</td>
+        <td>45</td>
+        <td><a href="https://leetcode-cn.com/u/lozy219">lozy219</a</td>
+        <td>20-02-14</td>
+        <td align="right">554</td>
+        <td align="right">33</td>
+        <td align="right">2569</td>
+        <td align="right">94.48</td>
+        <td align="right">485</td>
+        <td align="right">89.84</td>
+        <td align="right">543</td>
+        <td align="right">96.85</td>
+        <td align="right">1340</td>
+        <td align="right">92.12</td>
      </tr>
      <tr>
         <td>46</td>
-        <td><a href="https://leetcode.com/xianglaniunan">xianglaniunan</a</td>
-        <td>819</td>
-        <td>2265</td>
-        <td>92.54</td>
-        <td>449</td>
-        <td>92.38</td>
-        <td>370</td>
-        <td>92.70</td>
-        <td>827</td>
-        <td>90.18</td>
+        <td>46</td>
+        <td><a href="https://leetcode.com/zac4">zac4</a</td>
+        <td>19-07-12</td>
+        <td align="right">771</td>
+        <td align="right">16</td>
+        <td align="right">2119</td>
+        <td align="right">94.43</td>
+        <td align="right">187</td>
+        <td align="right">93.02</td>
+        <td align="right">716</td>
+        <td align="right">95.84</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>47</td>
-        <td><a href="https://leetcode-cn.com/u/yuanlu0210">yuanlu0210</a</td>
-        <td>189</td>
-        <td>2096</td>
-        <td>92.34</td>
-        <td>422</td>
-        <td>92.54</td>
-        <td>505</td>
-        <td>91.86</td>
-        <td>492</td>
-        <td>92.14</td>
+        <td>47</td>
+        <td><a href="https://leetcode.com/user7194i">user7194i</a</td>
+        <td>20-01-14</td>
+        <td align="right">585</td>
+        <td align="right">29</td>
+        <td align="right">2045</td>
+        <td align="right">94.38</td>
+        <td align="right">381</td>
+        <td align="right">90.95</td>
+        <td align="right">376</td>
+        <td align="right">97.82</td>
+        <td align="right">2315</td>
+        <td align="right">81.38</td>
      </tr>
      <tr>
         <td>48</td>
-        <td><a href="https://leetcode-cn.com/u/SupervisorMayHap">SupervisorMayHap</a</td>
-        <td>17</td>
-        <td>2113</td>
-        <td>92.17</td>
-        <td>463</td>
-        <td>92.30</td>
-        <td>476</td>
-        <td>92.04</td>
-        <td>776</td>
-        <td>90.48</td>
+        <td>48</td>
+        <td><a href="https://leetcode.com/hanzhoutang">hanzhoutang</a</td>
+        <td>20-10-11</td>
+        <td align="right">314</td>
+        <td align="right">58</td>
+        <td align="right">2197</td>
+        <td align="right">93.79</td>
+        <td align="right">1363</td>
+        <td align="right">75.48</td>
+        <td align="right">663</td>
+        <td align="right">96.15</td>
+        <td align="right">1456</td>
+        <td align="right">91.43</td>
      </tr>
      <tr>
         <td>49</td>
-        <td><a href="https://leetcode.com/remfzh">remfzh</a</td>
-        <td>74</td>
-        <td>2058</td>
-        <td>91.81</td>
-        <td>309</td>
-        <td>93.20</td>
-        <td>1113</td>
-        <td>83.07</td>
-        <td>786</td>
-        <td>90.42</td>
+        <td>49</td>
+        <td><a href="https://leetcode.com/ziyezhu92">ziyezhu92</a</td>
+        <td>20-03-08</td>
+        <td align="right">531</td>
+        <td align="right">34</td>
+        <td align="right">2154</td>
+        <td align="right">93.63</td>
+        <td align="right">393</td>
+        <td align="right">90.82</td>
+        <td align="right">875</td>
+        <td align="right">89.92</td>
+        <td align="right">606</td>
+        <td align="right">96.44</td>
      </tr>
      <tr>
         <td>50</td>
+        <td>50</td>
         <td><a href="https://leetcode.com/Googlehsiehh">Googlehsiehh</a</td>
-        <td>435</td>
-        <td>2127</td>
-        <td>91.81</td>
-        <td>369</td>
-        <td>92.85</td>
-        <td>681</td>
-        <td>90.76</td>
-        <td>970</td>
-        <td>89.35</td>
+        <td>20-05-09</td>
+        <td align="right">469</td>
+        <td align="right">46</td>
+        <td align="right">2196</td>
+        <td align="right">93.51</td>
+        <td align="right">435</td>
+        <td align="right">90.37</td>
+        <td align="right">1913</td>
+        <td align="right">83.88</td>
+        <td align="right">569</td>
+        <td align="right">96.66</td>
      </tr>
      <tr>
         <td>51</td>
-        <td><a href="https://leetcode-cn.com/u/deepli">deepli</a</td>
-        <td>133</td>
-        <td>2115</td>
-        <td>91.79</td>
-        <td>1389</td>
-        <td>81.89</td>
-        <td>232</td>
-        <td>93.56</td>
-        <td>854</td>
-        <td>90.03</td>
+        <td>51</td>
+        <td><a href="https://leetcode.com/hongrubb">hongrubb</a</td>
+        <td>20-07-17</td>
+        <td align="right">400</td>
+        <td align="right">49</td>
+        <td align="right">2107</td>
+        <td align="right">93.43</td>
+        <td align="right">1132</td>
+        <td align="right">88.42</td>
+        <td align="right">267</td>
+        <td align="right">98.43</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>52</td>
-        <td><a href="https://leetcode.com/direction">direction</a</td>
-        <td>77</td>
-        <td>2025</td>
-        <td>91.58</td>
-        <td>533</td>
-        <td>91.89</td>
-        <td>601</td>
-        <td>91.26</td>
-        <td>2113</td>
-        <td>82.69</td>
+        <td>52</td>
+        <td><a href="https://leetcode.com/fang2018">fang2018</a</td>
+        <td>19-06-04</td>
+        <td align="right">809</td>
+        <td align="right">15</td>
+        <td align="right">1968</td>
+        <td align="right">93.35</td>
+        <td align="right">521</td>
+        <td align="right">89.45</td>
+        <td align="right">628</td>
+        <td align="right">96.35</td>
+        <td align="right">1642</td>
+        <td align="right">90.34</td>
      </tr>
      <tr>
         <td>53</td>
-        <td><a href="https://leetcode.com/xywang0520">xywang0520</a</td>
-        <td>436</td>
-        <td>2221</td>
-        <td>91.51</td>
-        <td>503</td>
-        <td>92.07</td>
-        <td>861</td>
-        <td>89.64</td>
-        <td>694</td>
-        <td>90.96</td>
+        <td>53</td>
+        <td><a href="https://leetcode-cn.com/u/harttle">harttle</a</td>
+        <td>20-01-18</td>
+        <td align="right">581</td>
+        <td align="right">31</td>
+        <td align="right">2595</td>
+        <td align="right">93.32</td>
+        <td align="right">1163</td>
+        <td align="right">88.24</td>
+        <td align="right">273</td>
+        <td align="right">98.40</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>54</td>
-        <td><a href="https://leetcode.com/Dengxj">Dengxj</a</td>
-        <td>868</td>
-        <td>2142</td>
-        <td>91.47</td>
-        <td>569</td>
-        <td>91.68</td>
-        <td>600</td>
-        <td>91.27</td>
-        <td>1989</td>
-        <td>83.41</td>
+        <td>54</td>
+        <td><a href="https://leetcode-cn.com/u/deepli">deepli</a</td>
+        <td>21-03-07</td>
+        <td align="right">167</td>
+        <td align="right">92</td>
+        <td align="right">2091</td>
+        <td align="right">93.15</td>
+        <td align="right">624</td>
+        <td align="right">88.35</td>
+        <td align="right">1421</td>
+        <td align="right">86.74</td>
+        <td align="right">350</td>
+        <td align="right">97.95</td>
      </tr>
      <tr>
         <td>55</td>
-        <td><a href="https://leetcode.com/hongrubb">hongrubb</a</td>
-        <td>366</td>
-        <td>2064</td>
-        <td>91.29</td>
-        <td>1406</td>
-        <td>81.79</td>
-        <td>405</td>
-        <td>92.48</td>
-        <td>840</td>
-        <td>90.11</td>
+        <td>55</td>
+        <td><a href="https://leetcode.com/lzl124631x">lzl124631x</a</td>
+        <td>20-01-17</td>
+        <td align="right">582</td>
+        <td align="right">30</td>
+        <td align="right">2347</td>
+        <td align="right">93.04</td>
+        <td align="right">448</td>
+        <td align="right">90.23</td>
+        <td align="right">2098</td>
+        <td align="right">82.80</td>
+        <td align="right">706</td>
+        <td align="right">95.85</td>
      </tr>
      <tr>
         <td>56</td>
-        <td><a href="https://leetcode.com/weeeed">weeeed</a</td>
-        <td>152</td>
-        <td>2246</td>
-        <td>91.28</td>
-        <td>619</td>
-        <td>91.39</td>
-        <td>785</td>
-        <td>90.11</td>
-        <td>658</td>
-        <td>91.17</td>
+        <td>56</td>
+        <td><a href="https://leetcode.com/goodstudyqaq">goodstudyqaq</a</td>
+        <td>21-05-08</td>
+        <td align="right">105</td>
+        <td align="right">110</td>
+        <td align="right">2204</td>
+        <td align="right">92.35</td>
+        <td align="right">5580</td>
+        <td align="right">20.53</td>
+        <td align="right">1139</td>
+        <td align="right">88.38</td>
+        <td align="right">627</td>
+        <td align="right">96.31</td>
      </tr>
      <tr>
         <td>57</td>
-        <td><a href="https://leetcode.com/FightEveryDay">FightEveryDay</a</td>
-        <td>351</td>
-        <td>2193</td>
-        <td>91.23</td>
-        <td>408</td>
-        <td>92.62</td>
-        <td>829</td>
-        <td>89.84</td>
-        <td>1120</td>
-        <td>88.48</td>
+        <td>57</td>
+        <td><a href="https://leetcode.com/weeeed">weeeed</a</td>
+        <td>21-02-16</td>
+        <td align="right">186</td>
+        <td align="right">88</td>
+        <td align="right">2318</td>
+        <td align="right">92.30</td>
+        <td align="right">783</td>
+        <td align="right">86.66</td>
+        <td align="right">1675</td>
+        <td align="right">85.26</td>
+        <td align="right">351</td>
+        <td align="right">97.94</td>
      </tr>
      <tr>
         <td>58</td>
-        <td><a href="https://leetcode.com/zhangsz1998">zhangsz1998</a</td>
-        <td>300</td>
-        <td>2324</td>
-        <td>91.22</td>
-        <td>1649</td>
-        <td>80.37</td>
-        <td>736</td>
-        <td>90.42</td>
-        <td>512</td>
-        <td>92.02</td>
+        <td>58</td>
+        <td><a href="https://leetcode.com/bit3tbb">bit3tbb</a</td>
+        <td>21-08-13</td>
+        <td align="right">8</td>
+        <td align="right">164</td>
+        <td align="right">1960</td>
+        <td align="right">92.25</td>
+        <td align="right">687</td>
+        <td align="right">87.68</td>
+        <td align="right">1453</td>
+        <td align="right">86.56</td>
+        <td align="right">540</td>
+        <td align="right">96.83</td>
      </tr>
      <tr>
         <td>59</td>
-        <td><a href="https://leetcode.com/lih627">lih627</a</td>
-        <td>36</td>
-        <td>2144</td>
-        <td>91.19</td>
-        <td>1000</td>
-        <td>89.16</td>
-        <td>4985</td>
-        <td>58.93</td>
-        <td>307</td>
-        <td>93.22</td>
+        <td>59</td>
+        <td><a href="https://leetcode.com/xianglaniunan">xianglaniunan</a</td>
+        <td>19-04-21</td>
+        <td align="right">853</td>
+        <td align="right">10</td>
+        <td align="right">2156</td>
+        <td align="right">92.11</td>
+        <td align="right">620</td>
+        <td align="right">88.40</td>
+        <td align="right">2069</td>
+        <td align="right">82.97</td>
+        <td align="right">709</td>
+        <td align="right">95.83</td>
      </tr>
      <tr>
         <td>60</td>
-        <td><a href="https://leetcode.com/wanyoyo">wanyoyo</a</td>
-        <td>136</td>
-        <td>1981</td>
-        <td>91.19</td>
-        <td>461</td>
-        <td>92.31</td>
-        <td>793</td>
-        <td>90.06</td>
-        <td>3066</td>
-        <td>77.13</td>
+        <td>60</td>
+        <td><a href="https://leetcode.com/FightEveryDay">FightEveryDay</a</td>
+        <td>20-08-01</td>
+        <td align="right">385</td>
+        <td align="right">50</td>
+        <td align="right">2270</td>
+        <td align="right">92.09</td>
+        <td align="right">569</td>
+        <td align="right">88.94</td>
+        <td align="right">1926</td>
+        <td align="right">83.80</td>
+        <td align="right">808</td>
+        <td align="right">95.25</td>
      </tr>
      <tr>
         <td>61</td>
-        <td><a href="https://leetcode-cn.com/u/ViribusUnitis">ViribusUnitis</a</td>
-        <td>116</td>
-        <td>2124</td>
-        <td>91.05</td>
-        <td>863</td>
-        <td>89.96</td>
-        <td>461</td>
-        <td>92.13</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>61</td>
+        <td><a href="https://leetcode.com/BingleLove">BingleLove</a</td>
+        <td>19-09-07</td>
+        <td align="right">714</td>
+        <td align="right">21</td>
+        <td align="right">2071</td>
+        <td align="right">92.04</td>
+        <td align="right">439</td>
+        <td align="right">90.33</td>
+        <td align="right">2192</td>
+        <td align="right">82.26</td>
+        <td align="right">1061</td>
+        <td align="right">93.76</td>
      </tr>
      <tr>
         <td>62</td>
-        <td><a href="https://leetcode.com/venico19">venico19</a</td>
-        <td>561</td>
-        <td>2149</td>
-        <td>90.93</td>
-        <td>810</td>
-        <td>90.27</td>
-        <td>549</td>
-        <td>91.58</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>62</td>
+        <td><a href="https://leetcode.com/yuhengc2">yuhengc2</a</td>
+        <td>21-07-04</td>
+        <td align="right">48</td>
+        <td align="right">141</td>
+        <td align="right">2003</td>
+        <td align="right">91.92</td>
+        <td align="right">721</td>
+        <td align="right">87.32</td>
+        <td align="right">1835</td>
+        <td align="right">84.33</td>
+        <td align="right">592</td>
+        <td align="right">96.52</td>
      </tr>
      <tr>
         <td>63</td>
-        <td><a href="https://leetcode-cn.com/u/FighterNan">FighterNan</a</td>
-        <td>525</td>
-        <td>2375</td>
-        <td>90.90</td>
-        <td>968</td>
-        <td>89.35</td>
-        <td>411</td>
-        <td>92.44</td>
-        <td>1679</td>
-        <td>85.22</td>
+        <td>63</td>
+        <td><a href="https://leetcode.com/senliu_ac">senliu_ac</a</td>
+        <td>21-05-30</td>
+        <td align="right">83</td>
+        <td align="right">122</td>
+        <td align="right">2099</td>
+        <td align="right">91.86</td>
+        <td align="right">275</td>
+        <td align="right">92.08</td>
+        <td align="right">1715</td>
+        <td align="right">85.03</td>
+        <td align="right">1421</td>
+        <td align="right">91.64</td>
      </tr>
      <tr>
         <td>64</td>
-        <td><a href="https://leetcode.com/thumbpixels">thumbpixels</a</td>
-        <td>789</td>
-        <td>2004</td>
-        <td>90.76</td>
-        <td>777</td>
-        <td>90.47</td>
-        <td>635</td>
-        <td>91.05</td>
-        <td>3226</td>
-        <td>76.20</td>
+        <td>64</td>
+        <td><a href="https://leetcode.com/htkzmo">htkzmo</a</td>
+        <td>21-02-28</td>
+        <td align="right">174</td>
+        <td align="right">89</td>
+        <td align="right">2028</td>
+        <td align="right">91.84</td>
+        <td align="right">136</td>
+        <td align="right">93.56</td>
+        <td align="right">839</td>
+        <td align="right">90.13</td>
+        <td align="right">2183</td>
+        <td align="right">82.15</td>
      </tr>
      <tr>
         <td>65</td>
-        <td><a href="https://leetcode.com/wangyxwyx">wangyxwyx</a</td>
-        <td>34</td>
-        <td>1985</td>
-        <td>90.72</td>
-        <td>679</td>
-        <td>91.04</td>
-        <td>739</td>
-        <td>90.40</td>
-        <td>3398</td>
-        <td>75.19</td>
+        <td>65</td>
+        <td><a href="https://leetcode-cn.com/u/Courtmouse">Courtmouse</a</td>
+        <td>20-10-25</td>
+        <td align="right">300</td>
+        <td align="right">63</td>
+        <td align="right">1935</td>
+        <td align="right">91.84</td>
+        <td align="right">1011</td>
+        <td align="right">79.23</td>
+        <td align="right">999</td>
+        <td align="right">89.20</td>
+        <td align="right">937</td>
+        <td align="right">94.49</td>
      </tr>
      <tr>
         <td>66</td>
-        <td><a href="https://leetcode.com/guyang123">guyang123</a</td>
-        <td>92</td>
-        <td>2030</td>
-        <td>90.70</td>
-        <td>429</td>
-        <td>92.50</td>
-        <td>1076</td>
-        <td>83.30</td>
-        <td>1046</td>
-        <td>88.91</td>
+        <td>66</td>
+        <td><a href="https://leetcode.com/remfzh">remfzh</a</td>
+        <td>21-05-05</td>
+        <td align="right">108</td>
+        <td align="right">105</td>
+        <td align="right">2108</td>
+        <td align="right">91.72</td>
+        <td align="right">1319</td>
+        <td align="right">87.33</td>
+        <td align="right">663</td>
+        <td align="right">96.10</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>67</td>
-        <td><a href="https://leetcode.com/pjequilibrium">pjequilibrium</a</td>
-        <td>446</td>
-        <td>1989</td>
-        <td>90.63</td>
-        <td>945</td>
-        <td>89.49</td>
-        <td>518</td>
-        <td>91.78</td>
-        <td>1873</td>
-        <td>84.08</td>
+        <td>67</td>
+        <td><a href="https://leetcode.com/Memoria">Memoria</a</td>
+        <td>20-01-12</td>
+        <td align="right">587</td>
+        <td align="right">28</td>
+        <td align="right">1930</td>
+        <td align="right">91.60</td>
+        <td align="right">108</td>
+        <td align="right">93.86</td>
+        <td align="right">975</td>
+        <td align="right">89.34</td>
+        <td align="right">1831</td>
+        <td align="right">89.22</td>
      </tr>
      <tr>
         <td>68</td>
-        <td><a href="https://leetcode.com/hanzhoutang">hanzhoutang</a</td>
-        <td>280</td>
-        <td>2230</td>
-        <td>90.56</td>
-        <td>957</td>
-        <td>89.42</td>
-        <td>529</td>
-        <td>91.71</td>
-        <td>1314</td>
-        <td>87.34</td>
+        <td>68</td>
+        <td><a href="https://leetcode.com/M954">M954</a</td>
+        <td>21-07-10</td>
+        <td align="right">42</td>
+        <td align="right">143</td>
+        <td align="right">1825</td>
+        <td align="right">91.11</td>
+        <td align="right">549</td>
+        <td align="right">89.15</td>
+        <td align="right">2138</td>
+        <td align="right">82.57</td>
+        <td align="right">1178</td>
+        <td align="right">93.07</td>
      </tr>
      <tr>
         <td>69</td>
-        <td><a href="https://leetcode-cn.com/u/KKKXY">KKKXY</a</td>
-        <td>705</td>
-        <td>2293</td>
-        <td>90.52</td>
-        <td>184</td>
-        <td>98.93</td>
-        <td>1350</td>
-        <td>81.59</td>
-        <td>2213</td>
-        <td>82.10</td>
+        <td>69</td>
+        <td><a href="https://leetcode.com/bush117">bush117</a</td>
+        <td>21-05-10</td>
+        <td align="right">103</td>
+        <td align="right">112</td>
+        <td align="right">2047</td>
+        <td align="right">91.02</td>
+        <td align="right">1022</td>
+        <td align="right">79.12</td>
+        <td align="right">1505</td>
+        <td align="right">86.25</td>
+        <td align="right">716</td>
+        <td align="right">95.79</td>
      </tr>
      <tr>
         <td>70</td>
-        <td><a href="https://leetcode.com/buffa">buffa</a</td>
-        <td>351</td>
-        <td>2163</td>
-        <td>90.45</td>
-        <td>868</td>
-        <td>89.59</td>
-        <td>633</td>
-        <td>91.31</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>70</td>
+        <td><a href="https://leetcode.com/thumbpixels">thumbpixels</a</td>
+        <td>19-05-21</td>
+        <td align="right">823</td>
+        <td align="right">13</td>
+        <td align="right">2005</td>
+        <td align="right">90.83</td>
+        <td align="right">166</td>
+        <td align="right">93.24</td>
+        <td align="right">1134</td>
+        <td align="right">88.41</td>
+        <td align="right">2873</td>
+        <td align="right">78.09</td>
      </tr>
      <tr>
         <td>71</td>
-        <td><a href="https://leetcode.com/wwwap">wwwap</a</td>
-        <td>307</td>
-        <td>2105</td>
-        <td>90.42</td>
-        <td>990</td>
-        <td>89.22</td>
-        <td>542</td>
-        <td>91.63</td>
-        <td>2453</td>
-        <td>80.70</td>
+        <td>71</td>
+        <td><a href="https://leetcode.com/FunBam">FunBam</a</td>
+        <td>21-01-03</td>
+        <td align="right">230</td>
+        <td align="right">75</td>
+        <td align="right">2050</td>
+        <td align="right">90.69</td>
+        <td align="right">216</td>
+        <td align="right">92.71</td>
+        <td align="right">1089</td>
+        <td align="right">88.67</td>
+        <td align="right">2829</td>
+        <td align="right">78.35</td>
      </tr>
      <tr>
         <td>72</td>
-        <td><a href="https://leetcode.com/dennanisny">dennanisny</a</td>
-        <td>657</td>
-        <td>2072</td>
-        <td>90.17</td>
-        <td>293</td>
-        <td>93.29</td>
-        <td>1184</td>
-        <td>82.62</td>
-        <td>1364</td>
-        <td>87.05</td>
+        <td>72</td>
+        <td><a href="https://leetcode.com/Kamikakushi">Kamikakushi</a</td>
+        <td>21-01-26</td>
+        <td align="right">207</td>
+        <td align="right">85</td>
+        <td align="right">2087</td>
+        <td align="right">90.61</td>
+        <td align="right">1538</td>
+        <td align="right">73.62</td>
+        <td align="right">911</td>
+        <td align="right">89.71</td>
+        <td align="right">1443</td>
+        <td align="right">91.51</td>
      </tr>
      <tr>
         <td>73</td>
-        <td><a href="https://leetcode.com/33sharewithu">33sharewithu</a</td>
-        <td>195</td>
-        <td>2045</td>
-        <td>90.09</td>
-        <td>2003</td>
-        <td>78.30</td>
-        <td>677</td>
-        <td>90.79</td>
-        <td>962</td>
-        <td>89.40</td>
+        <td>73</td>
+        <td><a href="https://leetcode-cn.com/u/SupervisorMayHap">SupervisorMa...</a</td>
+        <td>21-07-01</td>
+        <td align="right">51</td>
+        <td align="right">140</td>
+        <td align="right">2181</td>
+        <td align="right">90.59</td>
+        <td align="right">1878</td>
+        <td align="right">69.99</td>
+        <td align="right">1264</td>
+        <td align="right">87.65</td>
+        <td align="right">1101</td>
+        <td align="right">93.52</td>
      </tr>
      <tr>
         <td>74</td>
-        <td><a href="https://leetcode.com/aChris">aChris</a</td>
-        <td>46</td>
-        <td>2084</td>
-        <td>89.68</td>
-        <td>1289</td>
-        <td>87.48</td>
-        <td>501</td>
-        <td>91.88</td>
-        <td>1508</td>
-        <td>86.21</td>
+        <td>74</td>
+        <td><a href="https://leetcode.com/hongleyou">hongleyou</a</td>
+        <td>20-11-05</td>
+        <td align="right">289</td>
+        <td align="right">64</td>
+        <td align="right">1964</td>
+        <td align="right">90.53</td>
+        <td align="right">506</td>
+        <td align="right">89.61</td>
+        <td align="right">1002</td>
+        <td align="right">89.18</td>
+        <td align="right">1455</td>
+        <td align="right">91.44</td>
      </tr>
      <tr>
         <td>75</td>
-        <td><a href="https://leetcode-cn.com/u/youjiahan">youjiahan</a</td>
-        <td>332</td>
-        <td>1951</td>
-        <td>88.98</td>
-        <td>962</td>
-        <td>89.01</td>
-        <td>1040</td>
-        <td>88.94</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>75</td>
+        <td><a href="https://leetcode.com/33sharewithu">33sharewithu</a</td>
+        <td>21-01-04</td>
+        <td align="right">229</td>
+        <td align="right">79</td>
+        <td align="right">2059</td>
+        <td align="right">90.34</td>
+        <td align="right">395</td>
+        <td align="right">90.80</td>
+        <td align="right">1513</td>
+        <td align="right">86.21</td>
+        <td align="right">1721</td>
+        <td align="right">89.87</td>
      </tr>
      <tr>
         <td>76</td>
-        <td><a href="https://leetcode.com/senliu_ac">senliu_ac</a</td>
-        <td>49</td>
-        <td>2036</td>
-        <td>88.78</td>
-        <td>617</td>
-        <td>91.40</td>
-        <td>1739</td>
-        <td>79.16</td>
-        <td>1519</td>
-        <td>86.15</td>
+        <td>76</td>
+        <td><a href="https://leetcode-cn.com/u/wenyou">wenyou</a</td>
+        <td>21-01-05</td>
+        <td align="right">228</td>
+        <td align="right">80</td>
+        <td align="right">2055</td>
+        <td align="right">90.27</td>
+        <td align="right">784</td>
+        <td align="right">86.65</td>
+        <td align="right">1039</td>
+        <td align="right">93.89</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>77</td>
-        <td><a href="https://leetcode.com/user7194i">user7194i</a</td>
-        <td>551</td>
-        <td>2082</td>
-        <td>87.81</td>
-        <td>383</td>
-        <td>92.62</td>
-        <td>2060</td>
-        <td>82.99</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>77</td>
+        <td><a href="https://leetcode.com/yllclover">yllclover</a</td>
+        <td>21-07-22</td>
+        <td align="right">30</td>
+        <td align="right">153</td>
+        <td align="right">1804</td>
+        <td align="right">90.23</td>
+        <td align="right">728</td>
+        <td align="right">87.25</td>
+        <td align="right">1765</td>
+        <td align="right">84.74</td>
+        <td align="right">1153</td>
+        <td align="right">93.22</td>
      </tr>
      <tr>
         <td>78</td>
-        <td><a href="https://leetcode.com/window0105">window0105</a</td>
-        <td>198</td>
-        <td>2113</td>
-        <td>87.78</td>
-        <td>1797</td>
-        <td>79.51</td>
-        <td>537</td>
-        <td>91.66</td>
-        <td>1905</td>
-        <td>83.90</td>
+        <td>78</td>
+        <td><a href="https://leetcode.com/lightmiao">lightmiao</a</td>
+        <td>21-05-23</td>
+        <td align="right">90</td>
+        <td align="right">119</td>
+        <td align="right">1780</td>
+        <td align="right">90.15</td>
+        <td align="right">619</td>
+        <td align="right">88.41</td>
+        <td align="right">4094</td>
+        <td align="right">66.19</td>
+        <td align="right">1378</td>
+        <td align="right">91.89</td>
      </tr>
      <tr>
         <td>79</td>
-        <td><a href="https://leetcode.com/ziyezhu92">ziyezhu92</a</td>
-        <td>497</td>
-        <td>2063</td>
-        <td>87.65</td>
-        <td>286</td>
-        <td>93.34</td>
-        <td>1291</td>
-        <td>81.96</td>
-        <td>2257</td>
-        <td>81.85</td>
+        <td>79</td>
+        <td><a href="https://leetcode.com/Dengxj">Dengxj</a</td>
+        <td>19-03-03</td>
+        <td align="right">902</td>
+        <td align="right">9</td>
+        <td align="right">2155</td>
+        <td align="right">89.54</td>
+        <td align="right">640</td>
+        <td align="right">88.18</td>
+        <td align="right">1627</td>
+        <td align="right">85.54</td>
+        <td align="right">1547</td>
+        <td align="right">90.90</td>
      </tr>
      <tr>
         <td>80</td>
-        <td><a href="https://leetcode.com/htkzmo">htkzmo</a</td>
-        <td>140</td>
-        <td>2144</td>
-        <td>87.38</td>
-        <td>1151</td>
-        <td>82.83</td>
-        <td>527</td>
-        <td>91.93</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>80</td>
+        <td><a href="https://leetcode.com/hellocici">hellocici</a</td>
+        <td>21-04-23</td>
+        <td align="right">120</td>
+        <td align="right">99</td>
+        <td align="right">1791</td>
+        <td align="right">89.35</td>
+        <td align="right">789</td>
+        <td align="right">86.60</td>
+        <td align="right">1743</td>
+        <td align="right">84.87</td>
+        <td align="right">1344</td>
+        <td align="right">92.09</td>
      </tr>
      <tr>
         <td>81</td>
-        <td><a href="https://leetcode.com/BingleLove">BingleLove</a</td>
-        <td>680</td>
-        <td>2079</td>
-        <td>87.30</td>
-        <td>1094</td>
-        <td>88.61</td>
-        <td>1457</td>
-        <td>80.92</td>
-        <td>1547</td>
-        <td>85.99</td>
+        <td>81</td>
+        <td><a href="https://leetcode.com/OneDirection">OneDirection</a</td>
+        <td>18-09-02</td>
+        <td align="right">1084</td>
+        <td align="right">1</td>
+        <td align="right">2033</td>
+        <td align="right">89.24</td>
+        <td align="right">1068</td>
+        <td align="right">78.63</td>
+        <td align="right">1007</td>
+        <td align="right">89.15</td>
+        <td align="right">1812</td>
+        <td align="right">89.34</td>
      </tr>
      <tr>
         <td>82</td>
-        <td><a href="https://leetcode.com/infmount">infmount</a</td>
-        <td>553</td>
-        <td>2195</td>
-        <td>86.24</td>
-        <td>1303</td>
-        <td>82.39</td>
-        <td>2249</td>
-        <td>75.99</td>
-        <td>842</td>
-        <td>90.10</td>
+        <td>82</td>
+        <td><a href="https://leetcode.com/upupming">upupming</a</td>
+        <td>21-05-02</td>
+        <td align="right">111</td>
+        <td align="right">101</td>
+        <td align="right">2039</td>
+        <td align="right">89.09</td>
+        <td align="right">1062</td>
+        <td align="right">78.69</td>
+        <td align="right">1191</td>
+        <td align="right">88.08</td>
+        <td align="right">1682</td>
+        <td align="right">90.10</td>
      </tr>
      <tr>
         <td>83</td>
-        <td><a href="https://leetcode.com/zk299">zk299</a</td>
-        <td>196</td>
-        <td>2027</td>
-        <td>86.24</td>
-        <td>1630</td>
-        <td>80.48</td>
-        <td>2330</td>
-        <td>75.48</td>
-        <td>516</td>
-        <td>92.00</td>
+        <td>83</td>
+        <td><a href="https://leetcode.com/aChris">aChris</a</td>
+        <td>21-06-02</td>
+        <td align="right">80</td>
+        <td align="right">124</td>
+        <td align="right">2069</td>
+        <td align="right">88.49</td>
+        <td align="right">2205</td>
+        <td align="right">66.51</td>
+        <td align="right">1842</td>
+        <td align="right">84.29</td>
+        <td align="right">1242</td>
+        <td align="right">92.69</td>
      </tr>
      <tr>
         <td>84</td>
-        <td><a href="https://leetcode.com/OneDirection">OneDirection</a</td>
-        <td>1050</td>
-        <td>2080</td>
-        <td>85.81</td>
-        <td>2011</td>
-        <td>78.26</td>
-        <td>1105</td>
-        <td>83.12</td>
-        <td>1114</td>
-        <td>88.51</td>
+        <td>84</td>
+        <td><a href="https://leetcode.com/sssssummer">sssssummer</a</td>
+        <td>21-07-16</td>
+        <td align="right">36</td>
+        <td align="right">147</td>
+        <td align="right">1716</td>
+        <td align="right">88.47</td>
+        <td align="right">673</td>
+        <td align="right">87.83</td>
+        <td align="right">4573</td>
+        <td align="right">63.41</td>
+        <td align="right">1850</td>
+        <td align="right">89.11</td>
      </tr>
      <tr>
         <td>85</td>
-        <td><a href="https://leetcode.com/lbyxiafei">lbyxiafei</a</td>
-        <td>373</td>
-        <td>2007</td>
-        <td>85.49</td>
-        <td>4962</td>
-        <td>61.02</td>
-        <td>1524</td>
-        <td>80.50</td>
-        <td>778</td>
-        <td>90.47</td>
+        <td>85</td>
+        <td><a href="https://leetcode.com/weiliang515">weiliang515</a</td>
+        <td>21-06-15</td>
+        <td align="right">67</td>
+        <td align="right">134</td>
+        <td align="right">1728</td>
+        <td align="right">88.47</td>
+        <td align="right">763</td>
+        <td align="right">86.88</td>
+        <td align="right">5203</td>
+        <td align="right">59.74</td>
+        <td align="right">1688</td>
+        <td align="right">90.07</td>
      </tr>
      <tr>
         <td>86</td>
-        <td><a href="https://leetcode.com/Kamikakushi">Kamikakushi</a</td>
-        <td>173</td>
-        <td>2087</td>
-        <td>85.42</td>
-        <td>903</td>
-        <td>89.73</td>
-        <td>1428</td>
-        <td>81.10</td>
-        <td>2966</td>
-        <td>77.71</td>
+        <td>86</td>
+        <td><a href="https://leetcode.com/YanJF">YanJF</a</td>
+        <td>20-06-21</td>
+        <td align="right">426</td>
+        <td align="right">47</td>
+        <td align="right">2044</td>
+        <td align="right">88.40</td>
+        <td align="right">641</td>
+        <td align="right">88.17</td>
+        <td align="right">1097</td>
+        <td align="right">88.63</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>87</td>
-        <td><a href="https://leetcode.com/zac4">zac4</a</td>
-        <td>737</td>
-        <td>2097</td>
-        <td>85.26</td>
-        <td>906</td>
-        <td>89.71</td>
-        <td>1474</td>
-        <td>80.82</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>87</td>
+        <td><a href="https://leetcode.com/marfemale">marfemale</a</td>
+        <td>21-05-31</td>
+        <td align="right">82</td>
+        <td align="right">123</td>
+        <td align="right">2002</td>
+        <td align="right">88.37</td>
+        <td align="right">1358</td>
+        <td align="right">75.53</td>
+        <td align="right">1333</td>
+        <td align="right">87.25</td>
+        <td align="right">1785</td>
+        <td align="right">89.50</td>
      </tr>
      <tr>
         <td>88</td>
-        <td><a href="https://leetcode.com/WeijieChen0_0">WeijieChen0_0</a</td>
-        <td>59</td>
-        <td>1836</td>
-        <td>85.08</td>
-        <td>1716</td>
-        <td>79.98</td>
-        <td>2569</td>
-        <td>73.99</td>
-        <td>829</td>
-        <td>90.17</td>
+        <td>88</td>
+        <td><a href="https://leetcode.com/xywang0520">xywang0520</a</td>
+        <td>20-05-08</td>
+        <td align="right">470</td>
+        <td align="right">44</td>
+        <td align="right">2306</td>
+        <td align="right">88.00</td>
+        <td align="right">1099</td>
+        <td align="right">78.30</td>
+        <td align="right">391</td>
+        <td align="right">97.70</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>89</td>
-        <td><a href="https://leetcode.com/bush117">bush117</a</td>
-        <td>69</td>
-        <td>2022</td>
-        <td>84.61</td>
-        <td>2876</td>
-        <td>73.20</td>
-        <td>1137</td>
-        <td>82.92</td>
-        <td>1493</td>
-        <td>86.30</td>
+        <td>89</td>
+        <td><a href="https://leetcode-cn.com/u/CE_RE_WAyitiaolong">CE_RE_WAyiti...</a</td>
+        <td>20-03-21</td>
+        <td align="right">518</td>
+        <td align="right">37</td>
+        <td align="right">2467</td>
+        <td align="right">87.98</td>
+        <td align="right">2316</td>
+        <td align="right">76.54</td>
+        <td align="right">98</td>
+        <td align="right">99.43</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>90</td>
-        <td><a href="https://leetcode-cn.com/u/Courtmouse">Courtmouse</a</td>
-        <td>266</td>
-        <td>1859</td>
-        <td>84.11</td>
-        <td>890</td>
-        <td>89.81</td>
-        <td>1860</td>
-        <td>78.41</td>
-        <td>3117</td>
-        <td>76.83</td>
+        <td>90</td>
+        <td><a href="https://leetcode.com/guyang123">guyang123</a</td>
+        <td>21-04-17</td>
+        <td align="right">126</td>
+        <td align="right">96</td>
+        <td align="right">2039</td>
+        <td align="right">87.93</td>
+        <td align="right">432</td>
+        <td align="right">90.40</td>
+        <td align="right">1642</td>
+        <td align="right">85.46</td>
+        <td align="right">2180</td>
+        <td align="right">82.17</td>
      </tr>
      <tr>
         <td>91</td>
-        <td><a href="https://leetcode-cn.com/u/slurpyFart">slurpyFart</a</td>
-        <td>173</td>
-        <td>1762</td>
-        <td>84.09</td>
-        <td>856</td>
-        <td>90.01</td>
-        <td>4530</td>
-        <td>61.76</td>
-        <td>2888</td>
-        <td>78.17</td>
+        <td>91</td>
+        <td><a href="https://leetcode.com/faang2022">faang2022</a</td>
+        <td>21-06-09</td>
+        <td align="right">73</td>
+        <td align="right">129</td>
+        <td align="right">1851</td>
+        <td align="right">87.80</td>
+        <td align="right">846</td>
+        <td align="right">85.99</td>
+        <td align="right">1979</td>
+        <td align="right">83.50</td>
+        <td align="right">1766</td>
+        <td align="right">89.61</td>
      </tr>
      <tr>
         <td>92</td>
-        <td><a href="https://leetcode.com/leetcodelibo">leetcodelibo</a</td>
-        <td>25</td>
-        <td>1641</td>
-        <td>83.99</td>
-        <td>775</td>
-        <td>90.48</td>
-        <td>2847</td>
-        <td>72.26</td>
-        <td>3002</td>
-        <td>77.50</td>
+        <td>92</td>
+        <td><a href="https://leetcode.com/zqsgopyyq">zqsgopyyq</a</td>
+        <td>21-02-05</td>
+        <td align="right">197</td>
+        <td align="right">86</td>
+        <td align="right">1799</td>
+        <td align="right">87.71</td>
+        <td align="right">1031</td>
+        <td align="right">79.02</td>
+        <td align="right">621</td>
+        <td align="right">96.39</td>
+        <td align="right">3204</td>
+        <td align="right">76.14</td>
      </tr>
      <tr>
         <td>93</td>
-        <td><a href="https://leetcode-cn.com/u/ws1255">ws1255</a</td>
-        <td>967</td>
-        <td>1939</td>
-        <td>83.63</td>
-        <td>3648</td>
-        <td>68.69</td>
-        <td>1473</td>
-        <td>80.82</td>
-        <td>1468</td>
-        <td>86.45</td>
+        <td>93</td>
+        <td><a href="https://leetcode.com/window0105">window0105</a</td>
+        <td>21-01-01</td>
+        <td align="right">232</td>
+        <td align="right">73</td>
+        <td align="right">2152</td>
+        <td align="right">86.79</td>
+        <td align="right">1299</td>
+        <td align="right">76.16</td>
+        <td align="right">2450</td>
+        <td align="right">75.76</td>
+        <td align="right">440</td>
+        <td align="right">97.42</td>
      </tr>
      <tr>
         <td>94</td>
-        <td><a href="https://leetcode.com/YanJF">YanJF</a</td>
-        <td>392</td>
-        <td>2092</td>
-        <td>83.13</td>
-        <td>1513</td>
-        <td>81.17</td>
-        <td>2116</td>
-        <td>76.81</td>
-        <td>1700</td>
-        <td>85.09</td>
+        <td>94</td>
+        <td><a href="https://leetcode.com/EdmizJay">EdmizJay</a</td>
+        <td>20-11-07</td>
+        <td align="right">287</td>
+        <td align="right">66</td>
+        <td align="right">2042</td>
+        <td align="right">86.49</td>
+        <td align="right">922</td>
+        <td align="right">80.18</td>
+        <td align="right">1223</td>
+        <td align="right">92.80</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>95</td>
-        <td><a href="https://leetcode-cn.com/u/rayms">rayms</a</td>
-        <td>199</td>
-        <td>1917</td>
-        <td>82.60</td>
-        <td>2026</td>
-        <td>78.17</td>
-        <td>2394</td>
-        <td>75.08</td>
-        <td>1367</td>
-        <td>87.03</td>
+        <td>95</td>
+        <td><a href="https://leetcode-cn.com/u/youjiahan">youjiahan</a</td>
+        <td>20-08-20</td>
+        <td align="right">366</td>
+        <td align="right">52</td>
+        <td align="right">1910</td>
+        <td align="right">86.48</td>
+        <td align="right">170</td>
+        <td align="right">99.02</td>
+        <td align="right">3577</td>
+        <td align="right">73.94</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>96</td>
-        <td><a href="https://leetcode.com/NaoJoeMiao">NaoJoeMiao</a</td>
-        <td>71</td>
-        <td>1841</td>
-        <td>82.29</td>
-        <td>3201</td>
-        <td>71.31</td>
-        <td>871</td>
-        <td>89.58</td>
-        <td>3430</td>
-        <td>75.01</td>
+        <td>96</td>
+        <td><a href="https://leetcode.com/WeijieChen0_0">WeijieChen0_0</a</td>
+        <td>21-05-20</td>
+        <td align="right">93</td>
+        <td align="right">118</td>
+        <td align="right">1881</td>
+        <td align="right">86.44</td>
+        <td align="right">417</td>
+        <td align="right">90.56</td>
+        <td align="right">2156</td>
+        <td align="right">82.31</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>97</td>
-        <td><a href="https://leetcode.com/marfemale">marfemale</a</td>
-        <td>48</td>
-        <td>1969</td>
-        <td>81.97</td>
-        <td>1345</td>
-        <td>82.15</td>
-        <td>1318</td>
-        <td>81.79</td>
-        <td>3238</td>
-        <td>76.13</td>
+        <td>97</td>
+        <td><a href="https://leetcode.com/whtttth">whtttth</a</td>
+        <td>21-07-18</td>
+        <td align="right">34</td>
+        <td align="right">149</td>
+        <td align="right">1794</td>
+        <td align="right">85.91</td>
+        <td align="right">1550</td>
+        <td align="right">73.49</td>
+        <td align="right">871</td>
+        <td align="right">89.94</td>
+        <td align="right">2230</td>
+        <td align="right">81.88</td>
      </tr>
      <tr>
         <td>98</td>
-        <td><a href="https://leetcode.com/sdliuyuzhi">sdliuyuzhi</a</td>
-        <td>1032</td>
-        <td>2006</td>
-        <td>81.70</td>
-        <td>1812</td>
-        <td>79.42</td>
-        <td>1062</td>
-        <td>83.39</td>
-        <td>2570</td>
-        <td>80.02</td>
+        <td>98</td>
+        <td><a href="https://leetcode.com/edisonnie">edisonnie</a</td>
+        <td>20-05-03</td>
+        <td align="right">475</td>
+        <td align="right">43</td>
+        <td align="right">1984</td>
+        <td align="right">85.69</td>
+        <td align="right">1038</td>
+        <td align="right">78.95</td>
+        <td align="right">1287</td>
+        <td align="right">92.43</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>99</td>
+        <td>99</td>
         <td><a href="https://leetcode.com/Evolut1on">Evolut1on</a</td>
-        <td>29</td>
-        <td>1808</td>
-        <td>81.66</td>
-        <td>849</td>
-        <td>90.05</td>
-        <td>2683</td>
-        <td>73.28</td>
-        <td>3767</td>
-        <td>73.04</td>
+        <td>21-06-19</td>
+        <td align="right">63</td>
+        <td align="right">136</td>
+        <td align="right">1819</td>
+        <td align="right">85.38</td>
+        <td align="right">390</td>
+        <td align="right">90.85</td>
+        <td align="right">4461</td>
+        <td align="right">64.06</td>
+        <td align="right">2565</td>
+        <td align="right">79.90</td>
      </tr>
      <tr>
         <td>100</td>
-        <td><a href="https://leetcode.com/faang2022">faang2022</a</td>
-        <td>39</td>
-        <td>1853</td>
-        <td>81.35</td>
-        <td>1538</td>
-        <td>81.02</td>
-        <td>4689</td>
-        <td>60.77</td>
-        <td>2287</td>
-        <td>81.67</td>
+        <td>100</td>
+        <td><a href="https://leetcode.com/YUFENGWANG">YUFENGWANG</a</td>
+        <td>21-07-15</td>
+        <td align="right">37</td>
+        <td align="right">146</td>
+        <td align="right">1695</td>
+        <td align="right">84.85</td>
+        <td align="right">746</td>
+        <td align="right">87.05</td>
+        <td align="right">4223</td>
+        <td align="right">65.44</td>
+        <td align="right">2098</td>
+        <td align="right">82.65</td>
      </tr>
      <tr>
         <td>101</td>
-        <td><a href="https://leetcode.com/skd233">skd233</a</td>
-        <td>254</td>
-        <td>1886</td>
-        <td>81.13</td>
-        <td>1749</td>
-        <td>79.79</td>
-        <td>1209</td>
-        <td>82.47</td>
-        <td>2953</td>
-        <td>77.79</td>
+        <td>101</td>
+        <td><a href="https://leetcode.com/wangyxwyx">wangyxwyx</a</td>
+        <td>21-06-14</td>
+        <td align="right">68</td>
+        <td align="right">132</td>
+        <td align="right">2007</td>
+        <td align="right">84.81</td>
+        <td align="right">1269</td>
+        <td align="right">76.48</td>
+        <td align="right">1168</td>
+        <td align="right">93.13</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>102</td>
-        <td><a href="https://leetcode.com/miguelmac">miguelmac</a</td>
-        <td>557</td>
-        <td>1793</td>
-        <td>81.06</td>
-        <td>1164</td>
-        <td>82.75</td>
-        <td>2680</td>
-        <td>79.38</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>102</td>
+        <td><a href="https://leetcode.com/bttsv">bttsv</a</td>
+        <td>21-07-23</td>
+        <td align="right">29</td>
+        <td align="right">155</td>
+        <td align="right">1717</td>
+        <td align="right">84.77</td>
+        <td align="right">2358</td>
+        <td align="right">64.88</td>
+        <td align="right">1574</td>
+        <td align="right">85.85</td>
+        <td align="right">1922</td>
+        <td align="right">83.69</td>
      </tr>
      <tr>
         <td>103</td>
-        <td><a href="https://leetcode.com/nickee1942">nickee1942</a</td>
-        <td>189</td>
-        <td>1981</td>
-        <td>80.97</td>
-        <td>1671</td>
-        <td>80.24</td>
-        <td>3382</td>
-        <td>68.92</td>
-        <td>2281</td>
-        <td>81.71</td>
+        <td>103</td>
+        <td><a href="https://leetcode.com/LZ1994">LZ1994</a</td>
+        <td>19-06-04</td>
+        <td align="right">809</td>
+        <td align="right">14</td>
+        <td align="right">1943</td>
+        <td align="right">84.58</td>
+        <td align="right">1110</td>
+        <td align="right">78.18</td>
+        <td align="right">2619</td>
+        <td align="right">74.77</td>
+        <td align="right">1532</td>
+        <td align="right">90.99</td>
      </tr>
      <tr>
         <td>104</td>
-        <td><a href="https://leetcode.com/FunBam">FunBam</a</td>
-        <td>196</td>
-        <td>2064</td>
-        <td>80.71</td>
-        <td>3298</td>
-        <td>70.74</td>
-        <td>694</td>
-        <td>90.68</td>
-        <td>5652</td>
-        <td>57.05</td>
+        <td>104</td>
+        <td><a href="https://leetcode.com/ForGive">ForGive</a</td>
+        <td>18-12-19</td>
+        <td align="right">976</td>
+        <td align="right">7</td>
+        <td align="right">2095</td>
+        <td align="right">84.42</td>
+        <td align="right">2112</td>
+        <td align="right">67.50</td>
+        <td align="right">1695</td>
+        <td align="right">85.15</td>
+        <td align="right">1921</td>
+        <td align="right">83.70</td>
      </tr>
      <tr>
         <td>105</td>
-        <td><a href="https://leetcode.com/ddwysg1">ddwysg1</a</td>
-        <td>476</td>
-        <td>1960</td>
-        <td>80.62</td>
-        <td>3105</td>
-        <td>71.87</td>
-        <td>2431</td>
-        <td>74.85</td>
-        <td>1477</td>
-        <td>86.39</td>
+        <td>105</td>
+        <td><a href="https://leetcode.com/chrisdzxu">chrisdzxu</a</td>
+        <td>21-01-04</td>
+        <td align="right">229</td>
+        <td align="right">78</td>
+        <td align="right">1986</td>
+        <td align="right">84.13</td>
+        <td align="right">1722</td>
+        <td align="right">71.65</td>
+        <td align="right">5688</td>
+        <td align="right">56.92</td>
+        <td align="right">578</td>
+        <td align="right">96.60</td>
      </tr>
      <tr>
         <td>106</td>
-        <td><a href="https://leetcode-cn.com/u/changyu_jiang">changyu_jiang</a</td>
-        <td>196</td>
-        <td>2039</td>
-        <td>80.38</td>
-        <td>4102</td>
-        <td>66.04</td>
-        <td>2668</td>
-        <td>73.37</td>
-        <td>1308</td>
-        <td>87.38</td>
+        <td>106</td>
+        <td><a href="https://leetcode.com/pjequilibrium">pjequilibrium</a</td>
+        <td>20-04-28</td>
+        <td align="right">480</td>
+        <td align="right">42</td>
+        <td align="right">2005</td>
+        <td align="right">84.00</td>
+        <td align="right">1240</td>
+        <td align="right">87.79</td>
+        <td align="right">2513</td>
+        <td align="right">80.21</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>107</td>
-        <td><a href="https://leetcode.com/LZ1994">LZ1994</a</td>
-        <td>775</td>
-        <td>1954</td>
-        <td>80.23</td>
-        <td>2382</td>
-        <td>76.09</td>
-        <td>3241</td>
-        <td>69.80</td>
-        <td>1824</td>
-        <td>84.37</td>
+        <td>107</td>
+        <td><a href="https://leetcode.com/skd233">skd233</a</td>
+        <td>20-11-06</td>
+        <td align="right">288</td>
+        <td align="right">65</td>
+        <td align="right">1943</td>
+        <td align="right">83.81</td>
+        <td align="right">2477</td>
+        <td align="right">63.61</td>
+        <td align="right">2886</td>
+        <td align="right">73.22</td>
+        <td align="right">953</td>
+        <td align="right">94.39</td>
      </tr>
      <tr>
         <td>108</td>
-        <td><a href="https://leetcode-cn.com/u/yinghuahu">yinghuahu</a</td>
-        <td>242</td>
-        <td>1789</td>
-        <td>79.87</td>
-        <td>1596</td>
-        <td>80.68</td>
-        <td>2911</td>
-        <td>71.86</td>
-        <td>2734</td>
-        <td>79.06</td>
+        <td>108</td>
+        <td><a href="https://leetcode.com/miguelmac">miguelmac</a</td>
+        <td>20-01-08</td>
+        <td align="right">591</td>
+        <td align="right">27</td>
+        <td align="right">1747</td>
+        <td align="right">83.72</td>
+        <td align="right">1014</td>
+        <td align="right">79.20</td>
+        <td align="right">1164</td>
+        <td align="right">88.24</td>
+        <td align="right">4049</td>
+        <td align="right">71.17</td>
      </tr>
      <tr>
         <td>109</td>
-        <td><a href="https://leetcode.com/hellocici">hellocici</a</td>
-        <td>86</td>
-        <td>1742</td>
-        <td>79.73</td>
-        <td>1144</td>
-        <td>88.32</td>
-        <td>3028</td>
-        <td>71.13</td>
-        <td>3895</td>
-        <td>67.29</td>
+        <td>109</td>
+        <td><a href="https://leetcode-cn.com/u/zk299">zk299</a</td>
+        <td>21-01-03</td>
+        <td align="right">230</td>
+        <td align="right">77</td>
+        <td align="right">2067</td>
+        <td align="right">83.64</td>
+        <td align="right">1795</td>
+        <td align="right">70.88</td>
+        <td align="right">611</td>
+        <td align="right">96.41</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>110</td>
-        <td><a href="https://leetcode.com/hongleyou">hongleyou</a</td>
-        <td>255</td>
-        <td>1924</td>
-        <td>79.13</td>
-        <td>2127</td>
-        <td>77.58</td>
-        <td>1496</td>
-        <td>80.68</td>
-        <td>4734</td>
-        <td>62.40</td>
+        <td>110</td>
+        <td><a href="https://leetcode.com/fighting_for_flag">fighting_for...</a</td>
+        <td>19-04-26</td>
+        <td align="right">848</td>
+        <td align="right">12</td>
+        <td align="right">1990</td>
+        <td align="right">83.02</td>
+        <td align="right">2653</td>
+        <td align="right">61.73</td>
+        <td align="right">1011</td>
+        <td align="right">89.13</td>
+        <td align="right">3074</td>
+        <td align="right">76.91</td>
      </tr>
      <tr>
         <td>111</td>
-        <td><a href="https://leetcode-cn.com/u/ddddyliu">ddddyliu</a</td>
-        <td>196</td>
-        <td>1920</td>
-        <td>78.31</td>
-        <td>2635</td>
-        <td>74.61</td>
-        <td>1980</td>
-        <td>77.66</td>
-        <td>2751</td>
-        <td>78.97</td>
+        <td>111</td>
+        <td><a href="https://leetcode-cn.com/u/wanyoyo">wanyoyo</a</td>
+        <td>21-03-04</td>
+        <td align="right">170</td>
+        <td align="right">90</td>
+        <td align="right">1978</td>
+        <td align="right">82.67</td>
+        <td align="right">896</td>
+        <td align="right">89.79</td>
+        <td align="right">3304</td>
+        <td align="right">75.55</td>
+        <td align="right">12199</td>
+        <td align="right">8.18</td>
      </tr>
      <tr>
         <td>112</td>
-        <td><a href="https://leetcode.com/ryanzhang29">ryanzhang29</a</td>
-        <td>24</td>
-        <td>1585</td>
-        <td>78.20</td>
-        <td>2897</td>
-        <td>73.08</td>
-        <td>7286</td>
-        <td>39.58</td>
-        <td>2003</td>
-        <td>83.33</td>
+        <td>112</td>
+        <td><a href="https://leetcode.com/leetcodelibo">leetcodelibo</a</td>
+        <td>21-06-23</td>
+        <td align="right">59</td>
+        <td align="right">137</td>
+        <td align="right">1810</td>
+        <td align="right">82.62</td>
+        <td align="right">1291</td>
+        <td align="right">76.25</td>
+        <td align="right">3807</td>
+        <td align="right">67.86</td>
+        <td align="right">1872</td>
+        <td align="right">88.98</td>
      </tr>
      <tr>
         <td>113</td>
-        <td><a href="https://leetcode.com/hc167">hc167</a</td>
-        <td>198</td>
-        <td>1867</td>
-        <td>78.19</td>
-        <td>2879</td>
-        <td>73.19</td>
-        <td>1540</td>
-        <td>80.41</td>
-        <td>3265</td>
-        <td>75.97</td>
+        <td>113</td>
+        <td><a href="https://leetcode.com/NaoJoeMiao">NaoJoeMiao</a</td>
+        <td>21-05-08</td>
+        <td align="right">105</td>
+        <td align="right">109</td>
+        <td align="right">1833</td>
+        <td align="right">81.70</td>
+        <td align="right">1256</td>
+        <td align="right">76.62</td>
+        <td align="right">2024</td>
+        <td align="right">83.23</td>
+        <td align="right">2520</td>
+        <td align="right">80.17</td>
      </tr>
      <tr>
         <td>114</td>
-        <td><a href="https://leetcode.com/jason_wong11">jason_wong11</a</td>
-        <td>677</td>
-        <td>1662</td>
-        <td>78.12</td>
-        <td>1805</td>
-        <td>78.75</td>
-        <td>3005</td>
-        <td>77.48</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>114</td>
+        <td><a href="https://leetcode.com/lynnnaive16">lynnnaive16</a</td>
+        <td>20-10-14</td>
+        <td align="right">311</td>
+        <td align="right">59</td>
+        <td align="right">1651</td>
+        <td align="right">81.64</td>
+        <td align="right">806</td>
+        <td align="right">86.42</td>
+        <td align="right">2259</td>
+        <td align="right">76.87</td>
+        <td align="right">7584</td>
+        <td align="right">40.35</td>
      </tr>
      <tr>
         <td>115</td>
-        <td><a href="https://leetcode.com/thinkiny">thinkiny</a</td>
-        <td>61</td>
-        <td>1750</td>
-        <td>78.00</td>
-        <td>1484</td>
-        <td>81.34</td>
-        <td>3414</td>
-        <td>68.72</td>
-        <td>3490</td>
-        <td>74.66</td>
+        <td>115</td>
+        <td><a href="https://leetcode.com/zhichuan">zhichuan</a</td>
+        <td>21-05-11</td>
+        <td align="right">102</td>
+        <td align="right">113</td>
+        <td align="right">1835</td>
+        <td align="right">81.63</td>
+        <td align="right">2568</td>
+        <td align="right">62.64</td>
+        <td align="right">1449</td>
+        <td align="right">86.58</td>
+        <td align="right">3111</td>
+        <td align="right">76.69</td>
      </tr>
      <tr>
         <td>116</td>
-        <td><a href="https://leetcode-cn.com/u/wenyou">wenyou</a</td>
-        <td>194</td>
-        <td>2072</td>
-        <td>77.98</td>
-        <td>2490</td>
-        <td>75.46</td>
-        <td>1525</td>
-        <td>80.50</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>116</td>
+        <td><a href="https://leetcode.com/vanstar123456">vanstar123456</a</td>
+        <td>21-07-18</td>
+        <td align="right">34</td>
+        <td align="right">150</td>
+        <td align="right">1880</td>
+        <td align="right">80.85</td>
+        <td align="right">1203</td>
+        <td align="right">77.19</td>
+        <td align="right">1803</td>
+        <td align="right">84.52</td>
+        <td align="right">3171</td>
+        <td align="right">76.34</td>
      </tr>
      <tr>
         <td>117</td>
-        <td><a href="https://leetcode.com/zhouxiongjia">zhouxiongjia</a</td>
-        <td>20</td>
-        <td>1699</td>
-        <td>77.90</td>
-        <td>2086</td>
-        <td>77.82</td>
-        <td>1928</td>
-        <td>77.99</td>
-        <td>5346</td>
-        <td>58.83</td>
+        <td>117</td>
+        <td><a href="https://leetcode.com/yuanlu0210">yuanlu0210</a</td>
+        <td>21-01-10</td>
+        <td align="right">223</td>
+        <td align="right">81</td>
+        <td align="right">2077</td>
+        <td align="right">80.60</td>
+        <td align="right">921</td>
+        <td align="right">80.19</td>
+        <td align="right">2378</td>
+        <td align="right">81.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>118</td>
-        <td><a href="https://leetcode-cn.com/u/lightmiao">lightmiao</a</td>
-        <td>56</td>
-        <td>1723</td>
-        <td>77.88</td>
-        <td>4556</td>
-        <td>63.39</td>
-        <td>991</td>
-        <td>88.83</td>
-        <td>3956</td>
-        <td>66.94</td>
+        <td>118</td>
+        <td><a href="https://leetcode-cn.com/u/mcuallen">mcuallen</a</td>
+        <td>20-09-18</td>
+        <td align="right">337</td>
+        <td align="right">54</td>
+        <td align="right">1742</td>
+        <td align="right">80.56</td>
+        <td align="right">3175</td>
+        <td align="right">71.54</td>
+        <td align="right">1770</td>
+        <td align="right">89.58</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>119</td>
-        <td><a href="https://leetcode.com/zhichuan">zhichuan</a</td>
-        <td>68</td>
-        <td>1817</td>
-        <td>76.92</td>
-        <td>2644</td>
-        <td>74.56</td>
-        <td>3918</td>
-        <td>65.58</td>
-        <td>2696</td>
-        <td>79.29</td>
+        <td>119</td>
+        <td><a href="https://leetcode.com/sdliuyuzhi">sdliuyuzhi</a</td>
+        <td>18-09-20</td>
+        <td align="right">1066</td>
+        <td align="right">3</td>
+        <td align="right">1965</td>
+        <td align="right">80.55</td>
+        <td align="right">1508</td>
+        <td align="right">73.94</td>
+        <td align="right">1347</td>
+        <td align="right">87.17</td>
+        <td align="right">3954</td>
+        <td align="right">71.72</td>
      </tr>
      <tr>
         <td>120</td>
-        <td><a href="https://leetcode.com/fang2018">fang2018</a</td>
-        <td>775</td>
-        <td>2011</td>
-        <td>76.88</td>
-        <td>2395</td>
-        <td>76.01</td>
-        <td>3811</td>
-        <td>66.25</td>
-        <td>2959</td>
-        <td>77.75</td>
+        <td>120</td>
+        <td><a href="https://leetcode.com/changyu_jiang">changyu_jiang</a</td>
+        <td>21-01-03</td>
+        <td align="right">230</td>
+        <td align="right">76</td>
+        <td align="right">1912</td>
+        <td align="right">79.51</td>
+        <td align="right">1628</td>
+        <td align="right">72.66</td>
+        <td align="right">1542</td>
+        <td align="right">86.04</td>
+        <td align="right">3741</td>
+        <td align="right">72.98</td>
      </tr>
      <tr>
         <td>121</td>
-        <td><a href="https://leetcode-cn.com/u/mcuallen">mcuallen</a</td>
-        <td>303</td>
-        <td>1819</td>
-        <td>76.63</td>
-        <td>6768</td>
-        <td>50.47</td>
-        <td>3369</td>
-        <td>69.00</td>
-        <td>1843</td>
-        <td>84.26</td>
+        <td>121</td>
+        <td><a href="https://leetcode-cn.com/u/lbyxiafei">lbyxiafei</a</td>
+        <td>20-07-10</td>
+        <td align="right">407</td>
+        <td align="right">48</td>
+        <td align="right">1939</td>
+        <td align="right">79.25</td>
+        <td align="right">2332</td>
+        <td align="right">76.44</td>
+        <td align="right">2199</td>
+        <td align="right">82.06</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>122</td>
-        <td><a href="https://leetcode.com/zqsgopyyq">zqsgopyyq</a</td>
-        <td>163</td>
-        <td>1815</td>
-        <td>76.02</td>
-        <td>2420</td>
-        <td>75.87</td>
-        <td>2218</td>
-        <td>76.18</td>
-        <td>4001</td>
-        <td>66.68</td>
+        <td>122</td>
+        <td><a href="https://leetcode-cn.com/u/zhouxiongjia">zhouxiongjia</a</td>
+        <td>21-06-28</td>
+        <td align="right">54</td>
+        <td align="right">139</td>
+        <td align="right">1775</td>
+        <td align="right">77.36</td>
+        <td align="right">2599</td>
+        <td align="right">74.89</td>
+        <td align="right">2577</td>
+        <td align="right">79.83</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>123</td>
-        <td><a href="https://leetcode.com/SDE2018_Carson_Yingying">SDE2018_Carson_Yingying</a</td>
-        <td>152</td>
-        <td>1750</td>
-        <td>75.89</td>
-        <td>4545</td>
-        <td>63.45</td>
-        <td>2881</td>
-        <td>72.04</td>
-        <td>2620</td>
-        <td>79.73</td>
+        <td>123</td>
+        <td><a href="https://leetcode.com/ddwysg1">ddwysg1</a</td>
+        <td>20-03-29</td>
+        <td align="right">510</td>
+        <td align="right">40</td>
+        <td align="right">1963</td>
+        <td align="right">76.86</td>
+        <td align="right">2640</td>
+        <td align="right">61.87</td>
+        <td align="right">1384</td>
+        <td align="right">91.86</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>124</td>
-        <td><a href="https://leetcode-cn.com/u/edisonnie">edisonnie</a</td>
-        <td>441</td>
-        <td>2006</td>
-        <td>75.55</td>
-        <td>1263</td>
-        <td>87.63</td>
-        <td>4255</td>
-        <td>63.48</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>124</td>
+        <td><a href="https://leetcode-cn.com/u/ws1255">ws1255</a</td>
+        <td>18-11-24</td>
+        <td align="right">1001</td>
+        <td align="right">6</td>
+        <td align="right">1849</td>
+        <td align="right">76.18</td>
+        <td align="right">1367</td>
+        <td align="right">75.44</td>
+        <td align="right">2251</td>
+        <td align="right">76.91</td>
+        <td align="right">5322</td>
+        <td align="right">58.67</td>
      </tr>
      <tr>
         <td>125</td>
-        <td><a href="https://leetcode-cn.com/u/stevenhuang42195">stevenhuang42195</a</td>
-        <td>197</td>
-        <td>1740</td>
-        <td>75.25</td>
-        <td>2831</td>
-        <td>73.47</td>
-        <td>3117</td>
-        <td>70.57</td>
-        <td>3081</td>
-        <td>77.04</td>
+        <td>125</td>
+        <td><a href="https://leetcode.com/ashzzyj">ashzzyj</a</td>
+        <td>21-05-16</td>
+        <td align="right">97</td>
+        <td align="right">115</td>
+        <td align="right">1792</td>
+        <td align="right">76.09</td>
+        <td align="right">1024</td>
+        <td align="right">79.10</td>
+        <td align="right">5124</td>
+        <td align="right">60.20</td>
+        <td align="right">3723</td>
+        <td align="right">73.08</td>
      </tr>
      <tr>
         <td>126</td>
+        <td>126</td>
         <td><a href="https://leetcode.com/cozlind">cozlind</a</td>
-        <td>73</td>
-        <td>1680</td>
-        <td>75.05</td>
-        <td>2820</td>
-        <td>73.53</td>
-        <td>2156</td>
-        <td>76.56</td>
-        <td>4351</td>
-        <td>64.64</td>
+        <td>21-05-06</td>
+        <td align="right">107</td>
+        <td align="right">107</td>
+        <td align="right">1686</td>
+        <td align="right">75.91</td>
+        <td align="right">1137</td>
+        <td align="right">77.89</td>
+        <td align="right">2765</td>
+        <td align="right">73.92</td>
+        <td align="right">5206</td>
+        <td align="right">59.35</td>
      </tr>
      <tr>
         <td>127</td>
-        <td><a href="https://leetcode.com/weiliang515">weiliang515</a</td>
-        <td>33</td>
-        <td>1641</td>
-        <td>74.20</td>
-        <td>2874</td>
-        <td>73.22</td>
-        <td>4659</td>
-        <td>60.96</td>
-        <td>3400</td>
-        <td>75.18</td>
+        <td>127</td>
+        <td><a href="https://leetcode.com/hc167">hc167</a</td>
+        <td>21-01-01</td>
+        <td align="right">232</td>
+        <td align="right">72</td>
+        <td align="right">1812</td>
+        <td align="right">75.46</td>
+        <td align="right">1340</td>
+        <td align="right">75.73</td>
+        <td align="right">10435</td>
+        <td align="right">19.32</td>
+        <td align="right">3365</td>
+        <td align="right">75.19</td>
      </tr>
      <tr>
         <td>128</td>
-        <td><a href="https://leetcode.com/lynnnaive16">lynnnaive16</a</td>
-        <td>277</td>
-        <td>1612</td>
-        <td>73.92</td>
-        <td>1875</td>
-        <td>79.05</td>
-        <td>3405</td>
-        <td>68.78</td>
-        <td>6167</td>
-        <td>54.05</td>
+        <td>128</td>
+        <td><a href="https://leetcode.com/bill04128682">bill04128682</a</td>
+        <td>21-06-05</td>
+        <td align="right">77</td>
+        <td align="right">125</td>
+        <td align="right">1875</td>
+        <td align="right">75.41</td>
+        <td align="right">3849</td>
+        <td align="right">67.62</td>
+        <td align="right">2004</td>
+        <td align="right">83.21</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>129</td>
-        <td><a href="https://leetcode-cn.com/u/EdmizJay">EdmizJay</a</td>
-        <td>253</td>
-        <td>2033</td>
-        <td>73.77</td>
-        <td>2595</td>
-        <td>73.83</td>
-        <td>3652</td>
-        <td>73.71</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>129</td>
+        <td><a href="https://leetcode.com/yinghuahu">yinghuahu</a</td>
+        <td>20-11-18</td>
+        <td align="right">276</td>
+        <td align="right">67</td>
+        <td align="right">1846</td>
+        <td align="right">75.24</td>
+        <td align="right">1257</td>
+        <td align="right">76.61</td>
+        <td align="right">2776</td>
+        <td align="right">73.86</td>
+        <td align="right">4592</td>
+        <td align="right">62.97</td>
      </tr>
      <tr>
         <td>130</td>
-        <td><a href="https://leetcode.com/fighting_for_flag">fighting_for_flag</a</td>
-        <td>814</td>
-        <td>2043</td>
-        <td>73.52</td>
-        <td>2835</td>
-        <td>73.44</td>
-        <td>2631</td>
-        <td>73.60</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>130</td>
+        <td><a href="https://leetcode.com/ScottCC">ScottCC</a</td>
+        <td>21-08-05</td>
+        <td align="right">16</td>
+        <td align="right">159</td>
+        <td align="right">1898</td>
+        <td align="right">74.81</td>
+        <td align="right">2961</td>
+        <td align="right">58.45</td>
+        <td align="right">4134</td>
+        <td align="right">65.96</td>
+        <td align="right">1926</td>
+        <td align="right">83.67</td>
      </tr>
      <tr>
         <td>131</td>
-        <td><a href="https://leetcode.com/playfair">playfair</a</td>
-        <td>99</td>
-        <td>1783</td>
-        <td>73.16</td>
-        <td>2207</td>
-        <td>77.11</td>
-        <td>3337</td>
-        <td>69.20</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>131</td>
+        <td><a href="https://leetcode.com/rayms">rayms</a</td>
+        <td>20-12-31</td>
+        <td align="right">233</td>
+        <td align="right">70</td>
+        <td align="right">1973</td>
+        <td align="right">74.42</td>
+        <td align="right">6531</td>
+        <td align="right">52.02</td>
+        <td align="right">542</td>
+        <td align="right">96.81</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>132</td>
-        <td><a href="https://leetcode.com/mrtong_liu">mrtong_liu</a</td>
-        <td>734</td>
-        <td>1974</td>
-        <td>72.32</td>
-        <td>1158</td>
-        <td>88.24</td>
-        <td>5391</td>
-        <td>56.40</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>132</td>
+        <td><a href="https://leetcode-cn.com/u/liulaoye135">liulaoye135</a</td>
+        <td>21-07-28</td>
+        <td align="right">24</td>
+        <td align="right">156</td>
+        <td align="right">1789</td>
+        <td align="right">73.76</td>
+        <td align="right">1709</td>
+        <td align="right">71.79</td>
+        <td align="right">3273</td>
+        <td align="right">75.73</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>133</td>
-        <td><a href="https://leetcode-cn.com/u/lianxin_cn">lianxin_cn</a</td>
-        <td>37</td>
-        <td>1741</td>
-        <td>72.29</td>
-        <td>3697</td>
-        <td>68.41</td>
-        <td>2980</td>
-        <td>71.43</td>
-        <td>3747</td>
-        <td>73.16</td>
+        <td>133</td>
+        <td><a href="https://leetcode.com/LeeShengkai">LeeShengkai</a</td>
+        <td>21-08-11</td>
+        <td align="right">10</td>
+        <td align="right">163</td>
+        <td align="right">1541</td>
+        <td align="right">73.40</td>
+        <td align="right">1977</td>
+        <td align="right">68.94</td>
+        <td align="right">3004</td>
+        <td align="right">72.53</td>
+        <td align="right">3524</td>
+        <td align="right">74.26</td>
      </tr>
      <tr>
         <td>134</td>
-        <td><a href="https://leetcode-cn.com/u/bill04128682">bill04128682</a</td>
-        <td>43</td>
-        <td>1912</td>
-        <td>71.62</td>
-        <td>5804</td>
-        <td>56.10</td>
-        <td>1349</td>
-        <td>87.14</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>134</td>
+        <td><a href="https://leetcode.com/thinkiny">thinkiny</a</td>
+        <td>21-05-18</td>
+        <td align="right">95</td>
+        <td align="right">117</td>
+        <td align="right">1786</td>
+        <td align="right">73.05</td>
+        <td align="right">2381</td>
+        <td align="right">64.63</td>
+        <td align="right">6132</td>
+        <td align="right">54.34</td>
+        <td align="right">2298</td>
+        <td align="right">81.48</td>
      </tr>
      <tr>
         <td>135</td>
-        <td><a href="https://leetcode-cn.com/u/zgtmy">zgtmy</a</td>
-        <td>274</td>
-        <td>1485</td>
-        <td>70.27</td>
-        <td>4728</td>
-        <td>62.38</td>
-        <td>6591</td>
-        <td>43.92</td>
-        <td>2890</td>
-        <td>78.15</td>
+        <td>135</td>
+        <td><a href="https://leetcode.com/FreshBing">FreshBing</a</td>
+        <td>20-09-28</td>
+        <td align="right">327</td>
+        <td align="right">57</td>
+        <td align="right">1601</td>
+        <td align="right">72.21</td>
+        <td align="right">2089</td>
+        <td align="right">67.74</td>
+        <td align="right">5519</td>
+        <td align="right">57.91</td>
+        <td align="right">3114</td>
+        <td align="right">76.67</td>
      </tr>
      <tr>
         <td>136</td>
-        <td><a href="https://leetcode.com/ashzzyj">ashzzyj</a</td>
-        <td>63</td>
-        <td>1755</td>
-        <td>69.06</td>
-        <td>1909</td>
-        <td>78.85</td>
-        <td>5470</td>
-        <td>55.90</td>
-        <td>5272</td>
-        <td>59.27</td>
+        <td>136</td>
+        <td><a href="https://leetcode.com/jingwenxxx">jingwenxxx</a</td>
+        <td>21-06-17</td>
+        <td align="right">65</td>
+        <td align="right">135</td>
+        <td align="right">1496</td>
+        <td align="right">71.83</td>
+        <td align="right">1083</td>
+        <td align="right">78.47</td>
+        <td align="right">4265</td>
+        <td align="right">65.20</td>
+        <td align="right">6095</td>
+        <td align="right">54.12</td>
      </tr>
      <tr>
         <td>137</td>
-        <td><a href="https://leetcode.com/sssssummer">sssssummer</a</td>
-        <td>2</td>
-        <td>1568</td>
-        <td>67.05</td>
-        <td>1216</td>
-        <td>87.90</td>
-        <td>6226</td>
-        <td>46.19</td>
-        <td>8040</td>
-        <td>38.13</td>
+        <td>137</td>
+        <td><a href="https://leetcode-cn.com/u/ryanwong0127">ryanwong0127</a</td>
+        <td>21-05-02</td>
+        <td align="right">111</td>
+        <td align="right">102</td>
+        <td align="right">1625</td>
+        <td align="right">70.92</td>
+        <td align="right">1444</td>
+        <td align="right">74.62</td>
+        <td align="right">3919</td>
+        <td align="right">67.21</td>
+        <td align="right">5516</td>
+        <td align="right">57.53</td>
      </tr>
      <tr>
         <td>138</td>
-        <td><a href="https://leetcode.com/WKelvinson">WKelvinson</a</td>
-        <td>87</td>
-        <td>1679</td>
-        <td>67.04</td>
-        <td>5902</td>
-        <td>55.53</td>
-        <td>8745</td>
-        <td>30.49</td>
-        <td>2823</td>
-        <td>78.55</td>
+        <td>138</td>
+        <td><a href="https://leetcode.com/daojingLeetcode">daojingLeetcode</a</td>
+        <td>21-08-02</td>
+        <td align="right">19</td>
+        <td align="right">157</td>
+        <td align="right">1571</td>
+        <td align="right">69.39</td>
+        <td align="right">2851</td>
+        <td align="right">59.62</td>
+        <td align="right">5982</td>
+        <td align="right">55.21</td>
+        <td align="right">2692</td>
+        <td align="right">79.16</td>
      </tr>
      <tr>
         <td>139</td>
-        <td><a href="https://leetcode.com/M954">M954</a</td>
-        <td>8</td>
-        <td>1623</td>
-        <td>66.52</td>
-        <td>3823</td>
-        <td>67.67</td>
-        <td>3952</td>
-        <td>65.37</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>139</td>
+        <td><a href="https://leetcode.com/danielxuforever">danielxuforever</a</td>
+        <td>21-07-22</td>
+        <td align="right">30</td>
+        <td align="right">154</td>
+        <td align="right">1445</td>
+        <td align="right">68.73</td>
+        <td align="right">1923</td>
+        <td align="right">69.51</td>
+        <td align="right">3794</td>
+        <td align="right">67.94</td>
+        <td align="right">6228</td>
+        <td align="right">53.34</td>
      </tr>
      <tr>
         <td>140</td>
-        <td><a href="https://leetcode.com/adayxiang">adayxiang</a</td>
-        <td>782</td>
-        <td>2105</td>
-        <td>62.42</td>
-        <td>5810</td>
-        <td>56.06</td>
-        <td>3406</td>
-        <td>68.77</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>140</td>
+        <td><a href="https://leetcode-cn.com/u/KyleAC">KyleAC</a</td>
+        <td>21-08-07</td>
+        <td align="right">14</td>
+        <td align="right">160</td>
+        <td align="right">1417</td>
+        <td align="right">68.29</td>
+        <td align="right">3694</td>
+        <td align="right">50.63</td>
+        <td align="right">1558</td>
+        <td align="right">85.94</td>
+        <td align="right">7531</td>
+        <td align="right">40.66</td>
      </tr>
      <tr>
         <td>141</td>
-        <td><a href="https://leetcode.com/chrisdzxu">chrisdzxu</a</td>
-        <td>195</td>
-        <td>1949</td>
-        <td>62.00</td>
-        <td>3906</td>
-        <td>65.65</td>
-        <td>5429</td>
-        <td>58.35</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>141</td>
+        <td><a href="https://leetcode-cn.com/u/TRDample">TRDample</a</td>
+        <td>21-08-05</td>
+        <td align="right">16</td>
+        <td align="right">158</td>
+        <td align="right">1516</td>
+        <td align="right">67.24</td>
+        <td align="right">2680</td>
+        <td align="right">61.44</td>
+        <td align="right">2917</td>
+        <td align="right">73.04</td>
+        <td align="right">5478</td>
+        <td align="right">57.75</td>
      </tr>
      <tr>
         <td>142</td>
-        <td><a href="https://leetcode-cn.com/u/youyou331">youyou331</a</td>
-        <td>91</td>
-        <td>1740</td>
-        <td>61.76</td>
-        <td>5431</td>
-        <td>58.28</td>
-        <td>4973</td>
-        <td>59.00</td>
-        <td>4370</td>
-        <td>64.52</td>
+        <td>142</td>
+        <td><a href="https://leetcode.com/ryanzhang29">ryanzhang29</a</td>
+        <td>21-06-24</td>
+        <td align="right">58</td>
+        <td align="right">138</td>
+        <td align="right">1603</td>
+        <td align="right">65.73</td>
+        <td align="right">1703</td>
+        <td align="right">71.86</td>
+        <td align="right">5228</td>
+        <td align="right">59.60</td>
+        <td align="right">5896</td>
+        <td align="right">55.29</td>
      </tr>
      <tr>
         <td>143</td>
-        <td><a href="https://leetcode.com/jliang">jliang</a</td>
-        <td>1009</td>
-        <td>1675</td>
-        <td>61.44</td>
-        <td>6769</td>
-        <td>50.46</td>
-        <td>4073</td>
-        <td>64.61</td>
-        <td>5444</td>
-        <td>58.26</td>
+        <td>143</td>
+        <td><a href="https://leetcode.com/playfair">playfair</a</td>
+        <td>21-04-10</td>
+        <td align="right">133</td>
+        <td align="right">95</td>
+        <td align="right">1794</td>
+        <td align="right">65.31</td>
+        <td align="right">1670</td>
+        <td align="right">72.21</td>
+        <td align="right">5431</td>
+        <td align="right">58.42</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>144</td>
-        <td><a href="https://leetcode.com/jzcheng">jzcheng</a</td>
-        <td>40</td>
-        <td>1658</td>
-        <td>61.02</td>
-        <td>8038</td>
-        <td>43.05</td>
-        <td>4677</td>
-        <td>60.85</td>
-        <td>4940</td>
-        <td>61.20</td>
+        <td>144</td>
+        <td><a href="https://leetcode-cn.com/u/tainule">tainule</a</td>
+        <td>21-05-23</td>
+        <td align="right">90</td>
+        <td align="right">120</td>
+        <td align="right">1593</td>
+        <td align="right">63.33</td>
+        <td align="right">3250</td>
+        <td align="right">55.37</td>
+        <td align="right">4061</td>
+        <td align="right">66.39</td>
+        <td align="right">5049</td>
+        <td align="right">60.28</td>
      </tr>
      <tr>
         <td>145</td>
-        <td><a href="https://leetcode.com/ryanwong0127">ryanwong0127</a</td>
-        <td>77</td>
-        <td>1521</td>
-        <td>58.35</td>
-        <td>5785</td>
-        <td>56.21</td>
-        <td>5701</td>
-        <td>54.46</td>
-        <td>5063</td>
-        <td>60.48</td>
+        <td>145</td>
+        <td><a href="https://leetcode.com/WKelvinson">WKelvinson</a</td>
+        <td>21-04-22</td>
+        <td align="right">121</td>
+        <td align="right">98</td>
+        <td align="right">1644</td>
+        <td align="right">63.32</td>
+        <td align="right">2707</td>
+        <td align="right">74.26</td>
+        <td align="right">6390</td>
+        <td align="right">52.38</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>146</td>
-        <td><a href="https://leetcode.com/FreshBing">FreshBing</a</td>
-        <td>293</td>
-        <td>1596</td>
-        <td>53.73</td>
-        <td>7109</td>
-        <td>48.48</td>
-        <td>5780</td>
-        <td>53.97</td>
-        <td>6264</td>
-        <td>53.48</td>
+        <td>146</td>
+        <td><a href="https://leetcode.com/SDE2018_Carson_Yingying">SDE2018_Cars...</a</td>
+        <td>21-02-16</td>
+        <td align="right">186</td>
+        <td align="right">87</td>
+        <td align="right">1710</td>
+        <td align="right">63.14</td>
+        <td align="right">1802</td>
+        <td align="right">70.80</td>
+        <td align="right">6633</td>
+        <td align="right">51.43</td>
+        <td align="right">5865</td>
+        <td align="right">55.47</td>
      </tr>
      <tr>
         <td>147</td>
-        <td><a href="https://leetcode.com/jingwenxxx">jingwenxxx</a</td>
-        <td>31</td>
-        <td>1457</td>
-        <td>53.32</td>
-        <td>3890</td>
-        <td>65.75</td>
-        <td>7565</td>
-        <td>40.90</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>147</td>
+        <td><a href="https://leetcode.com/wyzhang421">wyzhang421</a</td>
+        <td>21-07-07</td>
+        <td align="right">45</td>
+        <td align="right">142</td>
+        <td align="right">1744</td>
+        <td align="right">62.82</td>
+        <td align="right">2518</td>
+        <td align="right">63.17</td>
+        <td align="right">4735</td>
+        <td align="right">62.47</td>
+        <td align="right">4752</td>
+        <td align="right">62.03</td>
      </tr>
      <tr>
         <td>148</td>
-        <td><a href="https://leetcode.com/wyzhang421">wyzhang421</a</td>
-        <td>11</td>
-        <td>1791</td>
-        <td>50.60</td>
-        <td>8139</td>
-        <td>42.46</td>
-        <td>5015</td>
-        <td>58.74</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>148</td>
+        <td><a href="https://leetcode.com/meowbawang">meowbawang</a</td>
+        <td>21-06-14</td>
+        <td align="right">68</td>
+        <td align="right">133</td>
+        <td align="right">1497</td>
+        <td align="right">62.54</td>
+        <td align="right">2829</td>
+        <td align="right">59.85</td>
+        <td align="right">4259</td>
+        <td align="right">65.24</td>
+        <td align="right">6338</td>
+        <td align="right">52.69</td>
      </tr>
      <tr>
         <td>149</td>
-        <td><a href="https://leetcode.com/meowbawang">meowbawang</a</td>
-        <td>34</td>
-        <td>1425</td>
-        <td>50.26</td>
-        <td>4056</td>
-        <td>66.31</td>
-        <td>8148</td>
-        <td>34.21</td>
-        <td>8824</td>
-        <td>33.55</td>
+        <td>149</td>
+        <td><a href="https://leetcode-cn.com/u/jmzhang18">jmzhang18</a</td>
+        <td>21-07-17</td>
+        <td align="right">35</td>
+        <td align="right">148</td>
+        <td align="right">1721</td>
+        <td align="right">61.81</td>
+        <td align="right">2122</td>
+        <td align="right">67.39</td>
+        <td align="right">6189</td>
+        <td align="right">54.01</td>
+        <td align="right">5737</td>
+        <td align="right">56.23</td>
      </tr>
      <tr>
         <td>150</td>
-        <td><a href="https://leetcode.com/tainule">tainule</a</td>
-        <td>56</td>
-        <td>1620</td>
-        <td>49.19</td>
-        <td>5897</td>
-        <td>55.56</td>
-        <td>7371</td>
-        <td>39.05</td>
-        <td>7234</td>
-        <td>42.83</td>
+        <td>150</td>
+        <td><a href="https://leetcode-cn.com/u/lianxin_cn">lianxin_cn</a</td>
+        <td>21-06-11</td>
+        <td align="right">71</td>
+        <td align="right">130</td>
+        <td align="right">1784</td>
+        <td align="right">60.53</td>
+        <td align="right">4875</td>
+        <td align="right">61.65</td>
+        <td align="right">5196</td>
+        <td align="right">59.41</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>151</td>
-        <td><a href="https://leetcode.com/yuhengc2">yuhengc2</a</td>
-        <td>14</td>
-        <td>1989</td>
-        <td>45.15</td>
-        <td>755</td>
-        <td>90.30</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>151</td>
+        <td><a href="https://leetcode.com/CharlieZyl">CharlieZyl</a</td>
+        <td>21-08-11</td>
+        <td align="right">10</td>
+        <td align="right">162</td>
+        <td align="right">1622</td>
+        <td align="right">59.07</td>
+        <td align="right">2637</td>
+        <td align="right">61.90</td>
+        <td align="right">5806</td>
+        <td align="right">56.24</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>152</td>
-        <td><a href="https://leetcode.com/Jack_Ma1024">Jack_Ma1024</a</td>
-        <td>31</td>
-        <td>1459</td>
-        <td>44.07</td>
-        <td>7190</td>
-        <td>48.00</td>
-        <td>7403</td>
-        <td>38.85</td>
-        <td>7695</td>
-        <td>40.14</td>
+        <td>152</td>
+        <td><a href="https://leetcode-cn.com/u/sirgarfield">sirgarfield</a</td>
+        <td>21-07-21</td>
+        <td align="right">31</td>
+        <td align="right">152</td>
+        <td align="right">1736</td>
+        <td align="right">57.40</td>
+        <td align="right">6404</td>
+        <td align="right">52.76</td>
+        <td align="right">4749</td>
+        <td align="right">62.04</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>153</td>
-        <td><a href="https://leetcode.com/ForGive">ForGive</a</td>
-        <td>942</td>
-        <td>2105</td>
-        <td>43.33</td>
-        <td>1432</td>
-        <td>86.66</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>153</td>
+        <td><a href="https://leetcode.com/jzcheng">jzcheng</a</td>
+        <td>21-06-08</td>
+        <td align="right">74</td>
+        <td align="right">127</td>
+        <td align="right">1637</td>
+        <td align="right">52.22</td>
+        <td align="right">5098</td>
+        <td align="right">30.67</td>
+        <td align="right">9200</td>
+        <td align="right">31.50</td>
+        <td align="right">3748</td>
+        <td align="right">72.94</td>
      </tr>
      <tr>
         <td>154</td>
-        <td><a href="https://leetcode.com/axjin">axjin</a</td>
-        <td>190</td>
-        <td>2115</td>
-        <td>40.40</td>
-        <td>2436</td>
-        <td>80.80</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>154</td>
+        <td><a href="https://leetcode-cn.com/u/endlesscheng">endlesscheng</a</td>
+        <td>19-10-25</td>
+        <td align="right">666</td>
+        <td align="right">24</td>
+        <td align="right">2871</td>
+        <td align="right">51.96</td>
+        <td align="right">28</td>
+        <td align="right">99.84</td>
+        <td align="right">12897</td>
+        <td align="right">4.07</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>155</td>
-        <td><a href="https://leetcode.com/27rabbitlt">27rabbitlt</a</td>
-        <td>7</td>
-        <td>0</td>
-        <td>37.88</td>
-        <td>2438</td>
-        <td>75.76</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>155</td>
+        <td><a href="https://leetcode.com/JDEP">JDEP</a</td>
+        <td>20-08-10</td>
+        <td align="right">376</td>
+        <td align="right">51</td>
+        <td align="right">2599</td>
+        <td align="right">49.97</td>
+        <td align="right">11</td>
+        <td align="right">99.94</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>156</td>
-        <td><a href="https://leetcode.com/YUFENGWANG">YUFENGWANG</a</td>
-        <td>3</td>
-        <td>0</td>
-        <td>31.32</td>
-        <td>4684</td>
-        <td>62.64</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>156</td>
+        <td><a href="https://leetcode.com/zgtmy">zgtmy</a</td>
+        <td>20-10-17</td>
+        <td align="right">308</td>
+        <td align="right">60</td>
+        <td align="right">1472</td>
+        <td align="right">49.21</td>
+        <td align="right">4302</td>
+        <td align="right">44.15</td>
+        <td align="right">7352</td>
+        <td align="right">42.25</td>
+        <td align="right">6069</td>
+        <td align="right">54.27</td>
      </tr>
      <tr>
         <td>157</td>
-        <td><a href="https://leetcode.com/fangdanzai">fangdanzai</a</td>
-        <td>8</td>
-        <td>1524</td>
-        <td>6.31</td>
-        <td>11535</td>
-        <td>12.62</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>157</td>
+        <td><a href="https://leetcode.com/zhangsz1998">zhangsz1998</a</td>
+        <td>20-09-21</td>
+        <td align="right">334</td>
+        <td align="right">56</td>
+        <td align="right">2276</td>
+        <td align="right">48.30</td>
+        <td align="right">587</td>
+        <td align="right">96.59</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>158</td>
-        <td><a href="https://leetcode-cn.com/u/deadstorm">deadstorm</a</td>
-        <td>489</td>
-        <td>1433</td>
-        <td>5.91</td>
-        <td>11671</td>
-        <td>11.82</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>158</td>
+        <td><a href="https://leetcode.com/MSY16">MSY16</a</td>
+        <td>21-05-09</td>
+        <td align="right">104</td>
+        <td align="right">111</td>
+        <td align="right">1584</td>
+        <td align="right">46.02</td>
+        <td align="right">4456</td>
+        <td align="right">37.51</td>
+        <td align="right">8893</td>
+        <td align="right">33.28</td>
+        <td align="right">6025</td>
+        <td align="right">54.53</td>
      </tr>
      <tr>
         <td>159</td>
-        <td><a href="https://leetcode-cn.com/u/jiutiany1127">jiutiany1127</a</td>
-        <td>217</td>
-        <td>1763</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>159</td>
+        <td><a href="https://leetcode.com/jliang">jliang</a</td>
+        <td>18-10-13</td>
+        <td align="right">1043</td>
+        <td align="right">4</td>
+        <td align="right">1600</td>
+        <td align="right">45.53</td>
+        <td align="right">8401</td>
+        <td align="right">36.15</td>
+        <td align="right">5960</td>
+        <td align="right">54.91</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
      </tr>
      <tr>
         <td>160</td>
-        <td><a href="https://leetcode.com/dickbomb">dickbomb</a</td>
-        <td>39</td>
-        <td>1664</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
-        <td>-1</td>
-        <td>0.00</td>
+        <td>160</td>
+        <td><a href="https://leetcode-cn.com/u/deadstorm">deadstorm</a</td>
+        <td>20-03-16</td>
+        <td align="right">523</td>
+        <td align="right">36</td>
+        <td align="right">1433</td>
+        <td align="right">44.82</td>
+        <td align="right">3625</td>
+        <td align="right">51.37</td>
+        <td align="right">8034</td>
+        <td align="right">38.28</td>
+        <td align="right">9711</td>
+        <td align="right">22.83</td>
      </tr>
+     <tr>
+        <td>161</td>
+        <td>161</td>
+        <td><a href="https://leetcode-cn.com/u/stevenhuang42195">stevenhuang4...</a</td>
+        <td>21-01-02</td>
+        <td align="right">231</td>
+        <td align="right">74</td>
+        <td align="right">1748</td>
+        <td align="right">30.33</td>
+        <td align="right">5047</td>
+        <td align="right">60.65</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+     </tr>
+     <tr>
+        <td>162</td>
+        <td>162</td>
+        <td><a href="https://leetcode.com/zzgreen">zzgreen</a</td>
+        <td>21-08-11</td>
+        <td align="right">10</td>
+        <td align="right">161</td>
+        <td align="right">0</td>
+        <td align="right">27.20</td>
+        <td align="right">3340</td>
+        <td align="right">54.41</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+     </tr>
+     <tr>
+        <td>163</td>
+        <td>163</td>
+        <td><a href="https://leetcode-cn.com/u/jiutiany1127">jiutiany1127</a</td>
+        <td>20-12-13</td>
+        <td align="right">251</td>
+        <td align="right">69</td>
+        <td align="right">1763</td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+     </tr>
+     <tr>
+        <td>164</td>
+        <td>164</td>
+        <td><a href="https://leetcode.com/dickbomb">dickbomb</a</td>
+        <td>21-06-09</td>
+        <td align="right">73</td>
+        <td align="right">128</td>
+        <td align="right">1664</td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+        <td align="right"></td>
+        <td align="right">0.00</td>
+     </tr>
+</tbody>
+</table>
+
 </table>
 </div>
 </div>
